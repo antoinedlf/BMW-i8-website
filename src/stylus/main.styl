@@ -1,3 +1,9 @@
+$black = #000
+$grey = #6f7480
+$warm-grey = #8c8c8c
+$blue = #1c69d4
+$white = #fefefe
+
 @font-face
    font-family Apercu Pro
    font-style normal
@@ -7,6 +13,7 @@
    font-family Apercu Pro
    font-style bold
    src url(../fonts/ApercuPro-Bold.ttf)
+
 
 
 *
@@ -27,10 +34,10 @@ body
   width 100%
   height 100%
   overflow-x hidden
-  background-color #fefefe
+  background-color $black
   font-family 'ApercuPro', 'Open Sans', sans-serif
   font-size 100%
-  color #8c8c8c
+  color warm-grey
 ol, ul
   list-style none
 a
@@ -43,38 +50,38 @@ h1
 /***** SLIDES ******/
 
 #progressive
-  background #000
+  background $black
 
 #sports-car
-  background #fefefe
+  background $black
   span
-    color #444
+    color $grey
 
 #sections
-  background #000
+  background $black
 
 #technical
-  background #eeeeee
+  background $white
   span
-    color #1c69d4
+    color $blue
 
 #impulse
-  background #000
+  background $black
 
 #BMWseries
-  background #fefefe
+  background $white
   span
-    color #000
+    color $black
 
 #findcar
-  background #fefefe
+  background $white
   span
-    color #000
+    color $black
 
 #experience
-  background #000
+  background $black
   span
-    color #1c69d4
+    color $blue
 
 /**---- Mobile Bar ----**/
 .menu-toggle
@@ -87,8 +94,8 @@ h1
   padding 0 25px
   width 100%
   height 100px
-  color #fefefe
-  background-color #101014
+  color $white
+  background-color $black
   -webkit-box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
   box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
   li
@@ -97,13 +104,13 @@ h1
     margin-top 25px
     vertical-align middle
   .mobile-title
-    font-size 22px
+    font-size 2rem
 
-@media (max-width: 720px)
+@media (max-width: 940px)
   .mobile-bar
     height 80px
   .header
-    background-color #000 !important
+    background-color $black !important
     z-index 3
     .BMW-li-logo
       height 80px
@@ -111,9 +118,10 @@ h1
       text-align left
       font-size 1.5rem
       border-bottom 1px rgba(254, 254, 254, 0.2) solid
-      color #fefefe
+      color $white
       a
-        padding 12%
+        padding 5rem
+        font-size 1.8rem
         background-color transparent
       .BMW-logo
         padding 35px
@@ -139,7 +147,7 @@ h1
     margin-top -0.3em
     width 100%
     height 0.2em
-    background-color #fefefe
+    background-color $white
     -webkit-transition -webkit-transform 300ms ease-in
     transition -webkit-transform 300ms ease-in
     transition transform 300ms ease-in
@@ -149,7 +157,7 @@ h1
       position absolute
       width 100%
       height 100%
-      background-color #fefefe
+      background-color $white
       -webkit-transition: -webkit-transform 300ms ease
       transition -webkit-transform 300ms ease
       transition transform 300ms ease
@@ -187,26 +195,26 @@ h1
   left 0
   width 100%
   height 100%
-  background-color #fefefe
+  background-color $white
   overflow-y scroll
   text-align center
-  color #eee
+  color $warm-grey
   -webkit-transition opacity 300ms ease-in, visibility 0s ease-in 300ms
   transition opacity 300ms ease-in, visibility 0s ease-in 300ms
   nav, ul
     height 100%
   a
     display block
-    font-size 14px
+    font-size 0.9rem
     padding 35px
     -webkit-transition color 300ms ease-in
     transition color 300ms ease-in
     &:hover
-      color #1c69d4
+      color $blue
   .active
-    color #1c69d4
+    color $blue
   .non
-    background #000 !important
+    background $black !important
 
 /**---- Container ----**/
 .container
@@ -219,11 +227,11 @@ h1
   text-align center
   a
     font-weight 700
-    color #E53935
+    color $blue
     &:hover
       text-decoration underline
 
-@media (min-width: 720px)
+@media (min-width: 940px)
   .mobile-bar
     display none
   .header
@@ -249,7 +257,7 @@ h1
       display inline-block
     a
       padding 0px 2rem
-      color #4c4c52
+      color $grey
       vertical-align middle
       line-height 80px
 
@@ -288,7 +296,7 @@ body
     top 30%
     left 15%
     font-size 5vw
-    color #fff
+    color $white
 
 .slider__container section
     position relative
