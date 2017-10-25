@@ -1,8 +1,6 @@
 # HETIC P2020 Équipe 13
-Développement Front
-==============
-
 BMW i8
+==============
 
 ## Installation
 - Open project folder
