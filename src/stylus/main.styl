@@ -4,6 +4,10 @@ $warm-grey = #8c8c8c
 $blue = #1c69d4
 $white = #fefefe
 
+$font = 'ApercuPro'
+$opensans = 'Open Sans'
+$bold = 'Apercu Pro'
+
 @font-face
    font-family Apercu Pro
    font-style normal
@@ -15,6 +19,7 @@ $white = #fefefe
    src url(../fonts/ApercuPro-Bold.ttf)
 
 
+/***** Basic *****/
 
 *
   padding 0
@@ -35,55 +40,109 @@ body
   height 100%
   overflow-x hidden
   background-color $black
-  font-family 'ApercuPro', 'Open Sans', sans-serif
-  font-size 100%
+  font-family $font, $opensans, sans-serif
   color warm-grey
 ol, ul
   list-style none
 a
   text-decoration none
-  color inherit
+  color $blue
 h1
   margin 1em 0
+  font-size 2rem
 
+h2
+  font-size 1.6rem
+  color $grey
 
-/***** SLIDES ******/
+.surtitre
+  font-size 1rem
+  color $blue
+  font-family $bold
+
+/***** Progressive ******/
 
 #progressive
   background $black
 
+
+/***** Sports car ****/
+
 #sports-car
-  background $black
+  background $white
   span
     color $grey
 
+
+/**** 3 sections *****/
+
 #sections
-  background $black
+  background-color $black
+  div
+    color $white
+    padding 0rem 2rem
+    h1
+      font-family $font
+      font-size 1.6rem
+    p
+      color $grey
+      font-size 0.9rem
+      padding-right 4rem
+  .background-image
+    height 70%
+    background-size contain
+    background-repeat no-repeat
+    background-position left center
+
+
+/***** End 3 section ****/
+
+/**** Technical ****/
 
 #technical
   background $white
   span
     color $blue
 
+/**** End Technical ****/
+
+/**** Impulse ****/
+
 #impulse
   background $black
+
+/**** end impulse ****/
+
+
+/**** BMW series ****/
 
 #BMWseries
   background $white
   span
     color $black
 
+/**** end bmw series ****/
+
+
+/**** find your car ****/
+
 #findcar
   background $white
   span
     color $black
+
+/**** end find your car ****/
+
+/**** experience ****/
 
 #experience
   background $black
   span
     color $blue
 
-/**---- Mobile Bar ----**/
+/**** end experience ****/
+
+/**** Mobile Bar ****/
 .menu-toggle
   display none
 .mobile-bar
@@ -96,8 +155,6 @@ h1
   height 100px
   color $white
   background-color $black
-  -webkit-box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
-  box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
   li
     display inline-block
     margin-right 6%
@@ -105,6 +162,7 @@ h1
     vertical-align middle
   .mobile-title
     font-size 2rem
+    color $white
 
 @media (max-width: 940px)
   .mobile-bar
@@ -125,12 +183,13 @@ h1
       a
         padding 3rem
         font-size 1.6rem
+        color $white
         background-color transparent
       .BMW-logo
         padding 35px
 
 
-/**---- Menu Icon ----**/
+/**** Menu Icon ****/
 .menu-icon
   display block
   right 30px
@@ -172,7 +231,7 @@ h1
       -webkit-transform: translateY(0.6em)
       transform translateY(0.6em)
 
-/**---- Menu Icon Effects ----**/
+/**** Menu Icon Effects ****/
 .menu-toggle:checked
   +.mobile-bar
     .menu-icon
@@ -215,18 +274,20 @@ h1
   .non
     background $black !important
 
-/**---- Container ----**/
+
+/**** Container ****/
 .container
   padding 0px
   height 100%
-/**---- Footer ----**/
+
+
+/**** Footer ****/
 .footer
-  margin-top 40px
   font-size 0.9em
   text-align center
   a
-    font-weight 700
     color $blue
+    transition all 0.4s ease
     &:hover
       text-decoration underline
 
@@ -293,13 +354,6 @@ body
   width 100%
   margin 0
   padding 0
-  -webkit-transform translate3d(0, 0, 0)
-  transform translate3d(0, 0, 0)
-  -webkit-transition -webkit-transform 500ms ease-in-out
-  transition -webkit-transform 500ms ease-in-out
-  -o-transition transform 500ms ease-in-out
-  transition transform 500ms ease-in-out
-  transition transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out
 
 .slider__container section>span
     position absolute

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>BMW i8</title>
+  <meta name="description" content="BMW i8, the most progressive sports car. Available in 2018" />
+
   <link rel="icon" href="src/images/BMW-logo.png">
   <link rel="stylesheet" href="src/css/main.css">
-  <script src="src/js/index.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
 </head>
 
@@ -42,94 +46,76 @@
 
 
 
+  <!-- Container page -->
   <div class="container">
     <div class="slides slider__container">
 
+      <!-- Section progressive -->
       <section id="progressive">
         <span>The most progressive sports car</span>
       </section>
 
+      <!-- Section sports car -->
       <section id="sports-car">
         <span>Sports car redefined</span>
       </section>
 
+
+      <!-- Section Design, drive & efficency -->
       <section id="sections">
-        <div class="wrapper">
-
-          <nav class="nav__wrapper" id="navbar-example">
-            <ul class="nav">
-
-              <li role="presentation" class="active" id="section-design">
-                <a data-scroll href="#section1">
-                  <span class="nav__counter">Design</span>
-                </a>
-              </li>
-
-              <li role="presentation" id="section-drive">
-                <a data-scroll href="#section2">
-                  <span class="nav__counter">Drive</span>
-                </a>
-              </li>
-
-              <li role="presentation" id="section-dynamics">
-                <a data-scroll href="#section3">
-                  <span class="nav__counter">Efficency & dynamics</span>
-                </a>
-              </li>
-
-            </ul>
-          </nav>
-
-          <section class="section section1" id="section1">
-            <h1>Everythings appears to come from a unified whole.</h1>
-          </section>
-
-          <section class="section section2" id="section2">
-            BMW section 2
-          </section>
-
-          <section class="section section3" id="section3">
-            BMW section 3
-          </section>
-
+        <div id="section-content">
+          <h1 id="sectionh1">Everything appears to come from a unified whole.</h1>
+          <p id="sectionp">
+            Long wheelbase, short overhangs, a solid stance as it crouches on the street: the BMW i8 has all the characteristics of a full-blooded sports car.
+          </p>
+        </div>
+        <nav class="nav nav-sections">
+          <a href="#" id='design' class="active">Design</a>
+          <a href="#" id='drive'>Drive</a>
+          <a href="#" id='efficiency'>Efficency & dynamics</a>
+        </nav>
+        <div class="background-image" style="background-image:url(src/images/slider-1.png);">
         </div>
       </section>
 
 
+
+      <!-- Section Technical -->
       <section id="technical">
         <span>Technical data</span>
       </section>
 
 
+      <!-- Section Impulse -->
       <section id="impulse">
         <span>BMW pure impulse program</span>
       </section>
 
-
+      <!-- Section other series -->
       <section id="BMWseries">
         <span>BMW series</span>
       </section>
 
-
+      <!-- Section find your car -->
       <section id="findcar">
         <span>Find your car</span>
       </section>
 
-
+      <!-- Section buy NOW -->
       <section id="experience">
         <span>Buy Now</span>
       </section>
 
+      <!-- Container -->
     </div>
 
-
     <div class="footer">
-
+      <h1>Footer</h1>
     </div>
 
   </div>
 
-
+  <script src="src/js/animatedscroll.js"></script>
   <script src="src/js/index.js"></script>
 
 </body>
