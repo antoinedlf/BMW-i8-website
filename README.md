@@ -13,5 +13,5 @@ npm install
 ```
 * Run Gulp
 ```shell
-gulp default
+gulp
 ```
