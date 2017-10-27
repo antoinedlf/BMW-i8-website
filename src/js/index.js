@@ -21,7 +21,7 @@ button1.addEventListener("click",function(e){
   button1.classList.add("active");
   content.style.opacity = "1";
   title.style.opacity = "1";
-  sectionsbg.style.backgroundImage = "url(src/images/slider-1.png)";
+  sectionsbg.style.backgroundImage = "url(img/slider-1.png)";
 },800);
 },false);
 
@@ -36,7 +36,7 @@ setTimeout(function(){
    button2.classList.add("active");
    title.style.opacity = "1";
    content.style.opacity = "1";
-   sectionsbg.style.backgroundImage = "url(src/images/slider-2.png)";
+   sectionsbg.style.backgroundImage = "url(img/slider-2.png)";
 },800);
  },false);
 
@@ -51,6 +51,6 @@ setTimeout(function(){
     button3.classList.add("active");
     content.style.opacity = "1";
     title.style.opacity = "1";
-    sectionsbg.style.backgroundImage = "url(src/images/slider-3.png)";
+    sectionsbg.style.backgroundImage = "url(img/slider-3.png)";
   },800);
  },false);

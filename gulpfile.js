@@ -1,60 +1,86 @@
-var gulp = require( 'gulp' );
+var gulp         = require('gulp')
 
-gulp.task( 'default', function()
-{
-    console.log( 'coucou' );
-} );
+var  plumber       = require('gulp-plumber')
+     notify       = require('gulp-notify')
+     sourcemaps   = require('gulp-sourcemaps')
+     autoprefixer = require('gulp-autoprefixer')
+     rename       = require('gulp-rename')
+     imagemin     = require('gulp-imagemin')
+     connect      = require('gulp-connect')
+     open         = require('gulp-open')
+     stylus       = require('gulp-stylus')
+     concat       = require('gulp-concat')
+     uglify       = require('gulp-uglify')
+     ip           = require('ip').address()
 
-// Dependencies
-var gulp          = require( 'gulp'         ),
-    gulp_css_nano = require( 'gulp-cssnano' ),
-    gulp_rename   = require( 'gulp-rename'  ),
-    gulp_concat   = require( 'gulp-concat'  ),
-    gulp_uglify   = require( 'gulp-uglify'  ),
-    gulp_plumber  = require( 'gulp-plumber' ),
-    gulp_stylus   = require( 'gulp-stylus'  );
+let config = {
+    'src' : 'src/',
+    'dist': 'dist/',
+    'ip': ip,
+    'port': 8080
+}
 
-// CSS task
-//gulp.task( 'css', function()
-//{
-//    return gulp.src( './src/css/style.css' )    // Get main CSS file
-//        .pipe( gulp_css_nano() )                // Minify it
-//        .pipe( gulp_rename( 'style.min.css' ) ) // Rename it
-//        .pipe( gulp.dest( './src/css/' ) );     // Put it in folder
-//} );
 
-// CSS task+Stylus
+gulp.task('liveserver', () => {
+    connect.server({
+        root: 'dist',
+        livereload: true,
+        host: config.ip,
+        port: config.port
+    })
+})
+
+gulp.task('uri', () => {
+    return gulp.src(__filename)
+        .pipe(open({
+            uri: `http://${config.ip}:${config.port}`
+        }))
+})
+
+gulp.task('images', () => {
+    return gulp.src(config.src + 'img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest(config.dist + 'img'))
+        .pipe(connect.reload())
+        .pipe(notify('Image minified: <%= file.relative %>'))
+})
+
+gulp.task('fonts', () => {
+    return gulp.src(config.src + 'fonts/**/*')
+        .pipe(gulp.dest(config.dist + 'fonts'))
+        .pipe(connect.reload())
+})
+
 gulp.task( 'css', function()
 {
-    gulp.src( './src/stylus/main.styl' )   // main.styl as input
-        .pipe( gulp_plumber() )            // Gère les erreurs
-        .pipe( gulp_stylus( { compress: true } ) ) // Convert to CSS
-        .pipe( gulp.dest( './src/css' ) );         // Put it in CSS folder
+    gulp.src( './src/stylus/*.styl' )   // main.styl as input
+        .pipe( plumber() )            // Gère les erreurs
+        .pipe( stylus( { compress: true } ) ) // Convert to CSS
+        .pipe( gulp.dest(config.dist + 'css'));         // Put it in CSS folder
 } );
 
 // JS task
 gulp.task( 'js', function()
 {
     return gulp.src( [                          // Get JS files (in order)
-            './src/js/fastclick.js',
-            './src/js/main.js'
+            './src/js/*.js'
         ] )
-        .pipe( gulp_concat( 'main.min.js' ) ) // Concat in one file
-        .pipe( gulp_uglify() )                  // Minify them
-        .pipe( gulp.dest( './src/js/' ) );      // Put it in folder
+        .pipe( concat( 'main.min.js' ) ) // Concat in one file
+        .pipe( uglify() )                  // Minify them
+        .pipe( gulp.dest(config.dist + 'js') );      // Put it in folder
 } );
 
-// Watch task
-gulp.task( 'watch', function()
-{
-    // Watch for CSS modifications
-    gulp.watch( './src/css/main.css', [ 'css' ] );
 
-    // Watch for JS modifications (but not for script.min.js)
-    gulp.watch( [ './src/js/**', '!./src/js/main.min.js' ], [ 'js' ] );
+gulp.task('watch', () => {
+    gulp.watch(config.src + 'img/*', ['images'])
+    gulp.watch(config.src + 'fonts/*', ['fonts'])
+    gulp.watch(config.src + 'stylus/*', ['stylus'])
+    gulp.watch(config.src + 'js/*', ['js'])
+})
 
-    // Watch for stylus modifications
-    gulp.watch( './src/stylus/**', [ 'css' ] );
-} );
 
-gulp.task( 'default', [ 'css', 'js', 'watch' ] );
+gulp.task('connect', ['liveserver', 'uri'], () => {})
+
+gulp.task('build', ['css', 'fonts', 'js'], () => {})
+
+gulp.task('default', ['build', 'connect', 'watch'], () => {})
