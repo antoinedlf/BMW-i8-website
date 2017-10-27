@@ -74,7 +74,7 @@ gulp.task( 'js', function()
 gulp.task('watch', () => {
     gulp.watch(config.src + 'img/*', ['images'])
     gulp.watch(config.src + 'fonts/*', ['fonts'])
-    gulp.watch(config.src + 'stylus/*', ['stylus'])
+    gulp.watch(config.src + 'stylus/*', ['css'])
     gulp.watch(config.src + 'js/*', ['js'])
 })
 
