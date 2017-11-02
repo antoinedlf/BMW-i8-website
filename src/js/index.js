@@ -1,6 +1,16 @@
 /***** 3 sections content & slider animation *****/
 
 
+function moreTechnicalFunction() {
+    var x = document.getElementById("the-infos");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+
 /* Variables */
 var content = document.getElementById("sectionp");
 var title = document.getElementById("sectionh1");

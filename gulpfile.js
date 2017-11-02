@@ -53,7 +53,7 @@ gulp.task('fonts', () => {
 
 gulp.task( 'css', function()
 {
-    gulp.src( './src/stylus/*.styl' )   // main.styl as input
+    gulp.src( './src/stylus/app.styl' )   // main.styl as input
         .pipe( plumber() )            // Gère les erreurs
         .pipe( stylus( { compress: true } ) ) // Convert to CSS
         .pipe( gulp.dest(config.dist + 'css'));         // Put it in CSS folder

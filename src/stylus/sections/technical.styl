@@ -1,0 +1,110 @@
+#technical
+  background $technical
+  height auto !important
+  h2
+    font-size 1.5rem
+    color $blue
+    padding-left 5%
+    line-height 3
+    @media (max-width: 600px)
+      color $blue
+      padding-left 5%
+      line-height 3
+      font-size 1.5rem
+  button
+    background none
+    border none
+  #more-technical
+    width 60px
+    position absolute
+    left 90%
+    top 5%
+    cursor pointer
+    @media (max-width: 600px)
+      width 60px
+      position absolute
+      left 75%
+      top 1%
+  p
+    font-size 1rem
+    color $warm-grey
+    line-height 1.5
+    text-align left
+    padding-left 5%
+    @media (max-width: 600px)
+      line-height 1.5
+      text-align left
+      font-size 1rem
+      color $warm-grey
+      padding-left 5%
+  .circle-car
+    position relative
+    z-index 0
+    display flex
+    align-items center
+    justify-content center
+    padding-top 3%
+    img
+      width 50%
+      @media (max-width: 600px)
+        width 100%
+        padding-top 15%
+        margin auto
+    &:before
+      content '';
+      position absolute
+      width 500px
+      left 50%
+      margin-left -250px
+      z-index -1
+      height 500px
+      background $blue
+      border-radius 100%
+      @media (max-width: 600px)
+        content ''
+        display inline-block
+        width 300px
+        z-index -1
+        height 300px
+        background #1c69d4
+        border-radius 100%
+  .technical-infos
+    padding 10px
+    display flex
+    overflow hidden
+    align-items center
+    justify-content center
+  .tech_icon
+    span
+      color $blue
+      display block
+      text-align center
+      //line-height 0.4
+      //letter-spacing 9px
+      font-size 1.5rem
+  .tech_text
+    color $warm-grey
+    display block
+    text-align center
+    font-size 1rem
+  .tech-group
+    float left
+    padding 5px 10px
+  #the-infos
+    display none
+    .consumption
+      background-color #fafafa
+      .consumption-content
+        padding-top 10%
+        display flex
+        h2
+            font-size 1.8rem
+            color $warm-grey
+          p
+            font-size 1rem
+            line-height 10
+            color $warm-grey
+          span
+            font-size 1.125rem
+            color $blue
+            line-height 10
