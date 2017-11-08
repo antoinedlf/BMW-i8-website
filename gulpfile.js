@@ -39,9 +39,9 @@ gulp.task('uri', () => {
 })
 
 gulp.task('html', () =>
-    gulp.src(config.src + '*.html')
+        gulp.src(config.src + 'index.html')
         .pipe(gulp.dest(config.dist))
-        .pipe(browserSync.stream())
+        .pipe(connect.reload())
         .pipe(notify('HTML updated: <%= file.relative %>'))
 );
 
@@ -89,6 +89,6 @@ gulp.task('watch', () => {
 
 gulp.task('connect', ['liveserver', 'uri'], () => {})
 
-gulp.task('build', ['css', 'fonts', 'js'], () => {})
+gulp.task('build', ['html', 'images', 'css', 'fonts', 'js'], () => {})
 
 gulp.task('default', ['build', 'connect', 'watch'], () => {})
