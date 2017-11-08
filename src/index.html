@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BMW i8</title>
+  <meta name="description" content="BMW i8, the most progressive sports car. Available in 2018" />
+
+  <link rel="icon" href="img/BMW-logo.png">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Mobile Bar & Menu Icon -->
+  <input type="checkbox" class="menu-toggle" id="menu-toggle">
+  <div class="mobile-bar">
+    <nav>
+      <ul>
+        <li class="mobile-logo"><a href="#"><img src="img/BMW-logo.png" width="40" height="40" /></a></li>
+        <li class="mobile-title"><a href="#">BMW i8</a></li>
+        <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="main-nav">
+      <div class="logo"><a class="BMW-logo" href="index.html"><img src="img/BMW-logo.png" width="40" height="40" /></a></div>
+      <ul class="item">
+        <li><a href="#progressive" id="section-progressive" class="active">Overview</a></li>
+        <li><a href="#sections" id="section-technology">Technology</a></li>
+        <li><a href="#impulse" id="section-impulse">Pure impulse experience</a></li>
+        <li><a href="#findcar" id="section-findcar">Find Your BMW</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Container page -->
+  <div class="container">
+    <div class="slides slider__container">
+
+      <!-- Section progressive -->
+      <section id="progressive">
+        <span>The most progressive sports car</span>
+      </section>
+
+      <!-- Section sports car -->
+      <section id="sports-car">
+        <span>Sports car redefined</span>
+      </section>
+
+
+      <!-- Section Design, drive & efficency -->
+      <section id="sections">
+        <div id="section-content">
+          <h1 id="sectionh1">Everything appears to come from a unified whole.</h1>
+          <p id="sectionp">
+            Long wheelbase, short overhangs, a solid stance as it crouches on the street: the BMW i8 has all the characteristics of a full-blooded sports car.
+          </p>
+        </div>
+
+        <nav class="nav nav-sections">
+          <a href="#" id='design' class="active">Design</a>
+          <a href="#" id='drive'>Drive</a>
+          <a href="#" id='efficiency'>Efficency & dynamics</a>
+        </nav>
+        <div id="sections-background">
+        </div>
+      </section>
+
+
+
+      <!-- Section Technical -->
+      <section id="technical">
+        <h2>Technical data</h2>
+        <button onclick="moreTechnicalFunction()"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></button>
+        <p>
+          The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
+        </p>
+        <div class="circle-car">
+          <img id="car-technical" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
+        </div>
+        <div class="technical-infos">
+          <div class="tech-group">
+            <div class="tech_icon">
+              <span>4.4</span>
+            </div>
+            <div class="tech_text">
+              Acceleration 0–100 km/h in s
+            </div>
+          </div>
+          <div class="tech-group">
+            <div class="tech_icon">
+              <span>2.1</span>
+            </div>
+            <div class="tech_text">
+              Consumption combined in l/100 km
+            </div>
+          </div>
+          <div class="tech-group">
+            <div class="tech_icon">
+              <span>37</span>
+            </div>
+            <div class="tech_text">
+              CO2 emissions ing/km
+            </div>
+          </div>
+          <div class="tech-group">
+            <div class="tech_icon">
+              <span>49</span>
+            </div>
+            <div class="tech_text">
+              Electric range in km
+            </div>
+          </div>
+        </div>
+        <div id="the-infos">
+          <div class="consumption">
+            <div class="consumption-content">
+              <h2>Consumption</h2>
+              <p>CO2 emissions combined in g/km</p>
+              <span>49.0</span>
+              <p>CO2 efficiency</p>
+              <span>A+</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Section Impulse -->
+      <section id="impulse">
+        <span>BMW pure impulse program</span>
+      </section>
+
+      <!-- Section other series -->
+      <section id="BMWseries">
+        <span>BMW series</span>
+      </section>
+
+      <!-- Section find your car -->
+      <section id="findcar">
+        <span>Find your car</span>
+      </section>
+
+      <!-- Section buy NOW -->
+      <section id="experience">
+        <span>Buy Now</span>
+      </section>
+
+      <!-- Container -->
+    </div>
+
+    <div class="footer">
+      <h1>Footer</h1>
+    </div>
+
+  </div>
+
+  <script src="js/zenscroll-min.js"></script>
+  <script src="js/main.min.js"></script>
+
+
+</body>
+
+</html>

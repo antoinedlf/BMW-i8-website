@@ -13,6 +13,7 @@ var  plumber       = require('gulp-plumber')
      uglify       = require('gulp-uglify')
      ip           = require('ip').address()
 
+
 let config = {
     'src' : 'src/',
     'dist': 'dist/',
@@ -36,6 +37,13 @@ gulp.task('uri', () => {
             uri: `http://${config.ip}:${config.port}`
         }))
 })
+
+gulp.task('html', () =>
+    gulp.src(config.src + '*.html')
+        .pipe(gulp.dest(config.dist))
+        .pipe(browserSync.stream())
+        .pipe(notify('HTML updated: <%= file.relative %>'))
+);
 
 gulp.task('images', () => {
     return gulp.src(config.src + 'img/*')
