@@ -1,20 +1,19 @@
-var gulp         = require('gulp')
+const gulp         = require('gulp')
+const plumber       = require('gulp-plumber')
+const notify       = require('gulp-notify')
+const sourcemaps   = require('gulp-sourcemaps')
+const autoprefixer = require('gulp-autoprefixer')
+const rename       = require('gulp-rename')
+const imagemin     = require('gulp-imagemin')
+const connect      = require('gulp-connect')
+const open         = require('gulp-open')
+const stylus       = require('gulp-stylus')
+const concat       = require('gulp-concat')
+const babel        = require('gulp-babel')
+const ip           = require('ip').address()
 
-var  plumber       = require('gulp-plumber')
-     notify       = require('gulp-notify')
-     sourcemaps   = require('gulp-sourcemaps')
-     autoprefixer = require('gulp-autoprefixer')
-     rename       = require('gulp-rename')
-     imagemin     = require('gulp-imagemin')
-     connect      = require('gulp-connect')
-     open         = require('gulp-open')
-     stylus       = require('gulp-stylus')
-     concat       = require('gulp-concat')
-     uglify       = require('gulp-uglify')
-     ip           = require('ip').address()
 
-
-let config = {
+const config = {
     'src' : 'src/',
     'dist': 'dist/',
     'ip': ip,
@@ -67,17 +66,14 @@ gulp.task( 'css', function()
         .pipe( gulp.dest(config.dist + 'css'));         // Put it in CSS folder
 } );
 
-// JS task
-gulp.task( 'js', function()
-{
-    return gulp.src( [                          // Get JS files (in order)
-            './src/js/*.js'
-        ] )
-        .pipe( concat( 'main.min.js' ) ) // Concat in one file
-        .pipe( uglify() )                  // Minify them
-        .pipe( gulp.dest(config.dist + 'js') );      // Put it in folder
-} );
 
+// JS task
+gulp.task('js', () =>
+	gulp.src('src/js/*.js')
+		.pipe(babel())
+		.pipe(concat('main.min.js'))
+		.pipe(gulp.dest(config.dist + 'js'))
+);
 
 gulp.task('watch', () => {
     gulp.watch(config.src + 'img/*', ['images'])
