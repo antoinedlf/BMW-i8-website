@@ -1,5 +1,5 @@
 const gulp         = require('gulp')
-const plumber       = require('gulp-plumber')
+const plumber      = require('gulp-plumber')
 const notify       = require('gulp-notify')
 const sourcemaps   = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
