@@ -6,3 +6,10 @@ node_modules
 
 # Dist folder
 dist
+
+# Idea folder
+.idea
+
+# git
+.git
+.gitignore
