@@ -1,5 +1,32 @@
-/***** Menu items active color *****/
+/***** Menu items color *****/
 
+var menuactive       = document.querySelector(".header .active");
+var menuelements     = document.querySelector(".header").querySelectorAll("a");
+
+function activeClass(e) {
+    document.querySelector(".header .main-nav ul li .active").classList.remove("active");
+    e.classList.add('active');
+};
+
+/***** Menu items mobile *****/
+function menudisplay(e) {
+  var header = document.querySelector(".header");
+  var links = document.querySelector(".header ul");
+  var burger = document.querySelector(".menu-toggle");
+  var mq = window.matchMedia("(max-width: 800px)");
+
+  if (mq.matches) {
+    links.addEventListener("click", function(e) {
+      header.classList.add("none");
+      burger.checked = false;
+    }, false);
+
+    burger.addEventListener("click", function(e) {
+      header.classList.remove("none");
+      burger.checked = true;
+    }, false);
+  }
+};
 
 /***** 3 sections content & slider animation *****/
 function moreTechnicalFunction() {
@@ -14,17 +41,18 @@ function moreTechnicalFunction() {
 
 
 /* Variables */
-var content = document.getElementById("sectionp");
-var title = document.getElementById("sectionh1");
-var button1 = document.getElementById("design");
-var button2 = document.getElementById("drive");
-var button3 = document.getElementById("efficiency");
-var sectionsbg = document.getElementById("sections-background");
+var content = document.querySelector(".sectionp");
+var title = document.querySelector(".sectionh1");
+var button1 = document.querySelector(".design");
+var button2 = document.querySelector(".drive");
+var button3 = document.querySelector(".efficiency");
+var sectionsbg = document.querySelector(".sections-background");
 
 /* on click 3 right buttons */
 button1.addEventListener("click",function(e){
   content.style.opacity = "0";
   title.style.opacity = "0";
+  sectionsbg.style.opacity = "0";
   button2.classList.remove("active");
   button3.classList.remove("active");
   setTimeout(function(){
@@ -34,12 +62,14 @@ button1.addEventListener("click",function(e){
   content.style.opacity = "1";
   title.style.opacity = "1";
   sectionsbg.style.backgroundImage = "url(img/slider-1.png)";
+  sectionsbg.style.opacity = "1";
 },800);
 },false);
 
  button2.addEventListener("click",function(e){
    content.style.opacity = "0";
    title.style.opacity = "0";
+   sectionsbg.style.opacity = "0";
    button1.classList.remove("active");
    button3.classList.remove("active");
 setTimeout(function(){
@@ -49,12 +79,14 @@ setTimeout(function(){
    title.style.opacity = "1";
    content.style.opacity = "1";
    sectionsbg.style.backgroundImage = "url(img/slider-2.png)";
+   sectionsbg.style.opacity = "1";
 },800);
  },false);
 
  button3.addEventListener("click",function(e){
    content.style.opacity = "0";
    title.style.opacity = "0";
+   sectionsbg.style.opacity = "0";
    button1.classList.remove("active");
    button2.classList.remove("active");
    setTimeout(function(){
@@ -64,5 +96,6 @@ setTimeout(function(){
     content.style.opacity = "1";
     title.style.opacity = "1";
     sectionsbg.style.backgroundImage = "url(img/slider-3.png)";
+    sectionsbg.style.opacity = "1";
   },800);
  },false);
