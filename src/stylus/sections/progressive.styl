@@ -3,26 +3,43 @@
   background-repeat no-repeat
   background-size cover
   background-position center
-  h1
-    font-size 1.425rem
-    font-weight 500
-    text-align left
-    color $blue
-    padding-top 8.75rem
-    margin-left 2.375rem
-  h2
-    font-size 1.625rem
-    text-align left
-    font-weight 500
-    color $white
-    margin auto 2.375rem
-  p
-    font-size 1.025rem
-    font-weight 500
-    margin-left 2.375rem
-    margin-top 1.875rem
-    a
+  height 100vh
+  @media (min-width: 376px)
+    height auto
+  .progressive__content
+    margin-left 10%
+    @media (min-width: 1024px)
+      margin-left 10%
+    h1
+      font-size 1.425rem
+      font-weight 500
+      text-align left
+      color $blue
+      padding-top 5.75rem
+    h2
+      font-size 1.625rem
+      text-align left
+      font-weight 500
+      color $white
+      width 21.3rem
+      @media (min-width: 768px)
+        width 38rem
+        font-size 3rem
+    .progressive__texte
       color $warm-grey
+      font-size 1.025rem
+      font-weight 500
+      margin-top 1.875rem
+      &:before
+        margin-right 0.9375rem
+        content ''
+        background-image url(../img/arrow.png)
+        width 0.8125rem
+        height 0.8125rem
+        display inline-block
+        background-repeat no-repeat
+        background-size cover
+        background-position center
   .progressive__picture
     // width 100%
     // height 340px
@@ -31,8 +48,10 @@
     // background-size cover
     // background-position center
     width 100vw
-    height 215px
-    position relative
+    height 13.4375rem
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // display: flex;
     // // justify-content: center;
     // align-items: center;
@@ -40,8 +59,32 @@
       position absolute
       top 0
       max-width 100vw
+      top 45%
+      @media (min-width: 460px)
+        top 25%
+      @media (min-width: 768px)
+        top 15%
+      @media (min-width: 1024px)
+        top 20%
+        max-width: 68vw;
     .progressive__pic2
       position absolute
-      top 45%
+      top 60%
       max-width 41vw
       left 50%
+      @media (min-width: 460px)
+        top 50%
+      @media (min-width: 768px)
+        top 50%
+      @media (min-width: 1024px)
+        top 50%
+        max-width: 31vw;
+  .progressive__pic3
+    display block
+    padding-top 20%
+    text-align center
+    padding-bottom 2%
+  @media (min-width: 1024px)
+    margin-top 1rem
+    p
+      font-size 1.125rem
