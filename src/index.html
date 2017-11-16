@@ -36,10 +36,10 @@
     <nav class="main-nav">
       <div class="logo"><a class="BMW-logo" href="index.html"><img src="img/BMW-logo.png" width="40" height="40" /></a></div>
       <ul class="item">
-        <li><a href="#progressive" id="section-progressive" class="active">Overview</a></li>
-        <li><a href="#sections" id="section-technology">Technology</a></li>
-        <li><a href="#impulse" id="section-impulse">Pure impulse experience</a></li>
-        <li><a href="#findcar" id="section-findcar">Find Your BMW</a></li>
+        <li><a href="#progressive" onclick="activeClass(this); menudisplay(this);" id="section-progressive" class="active">Overview</a></li>
+        <li><a href="#sections" onclick="activeClass(this); menudisplay(this);" id="section-technology">Technology</a></li>
+        <li><a href="#impulse" onclick="activeClass(this); menudisplay(this);" id="section-impulse">Pure impulse experience</a></li>
+        <li><a href="#findcar" onclick="activeClass(this); menudisplay(this);" id="section-findcar">Find Your BMW</a></li>
       </ul>
     </nav>
   </header>
@@ -54,11 +54,24 @@
       <section id="progressive">
         <h1>BMW-i8</h1>
         <h2>The most progressive sports car</h2>
+<<<<<<< HEAD
         <p>Watch the movie</p>
         <div class="progressive__picture">
           <img class="progressive__pic2" src="img/car-2.png" alt="">
           <img class="progressive__pic" src="img/car.png" alt="">
 
+=======
+        <p>
+          <svg fill="#8c8c8c" height="15" viewBox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+          </svg>
+          <a href="#">Watch the movie</a>
+        </p>
+        <div class="progressive__picture">
+          <img class="progressive__pic2" src="img/car-2.png" alt="">
+          <img class="progressive__pic" src="img/car.png" alt="">
+>>>>>>> dev
         </div>
       </section>
 
@@ -70,19 +83,19 @@
 
       <!-- Section Design, drive & efficency -->
       <section id="sections">
-        <div id="section-content">
-          <h1 id="sectionh1">Everything appears to come from a unified whole.</h1>
-          <p id="sectionp">
+        <div class="section-content">
+          <h1 class="sectionh1">Everything appears to come from a unified whole.</h1>
+          <p class="sectionp">
             Long wheelbase, short overhangs, a solid stance as it crouches on the street: the BMW i8 has all the characteristics of a full-blooded sports car.
           </p>
         </div>
 
         <nav class="nav nav-sections">
-          <a href="#" id='design' class="active">Design</a>
-          <a href="#" id='drive'>Drive</a>
-          <a href="#" id='efficiency'>Efficency & dynamics</a>
+          <a href="#" class="design active">Design</a>
+          <a href="#" class="drive">Drive</a>
+          <a href="#" class="efficiency">Efficency & dynamics</a>
         </nav>
-        <div id="sections-background">
+        <div class="sections-background">
         </div>
       </section>
 
