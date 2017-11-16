@@ -104,57 +104,99 @@
 
       <!-- Section Technical -->
       <section id="technical">
-        <h2>Technical data</h2>
-        <button onclick="moreTechnicalFunction()"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></button>
-        <p>
+        <h2 id="technical__introtitle">Technical data</h2>
+        <div class="technical__toggle"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></div>
+        <p class="technical__introduction">
           The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
         </p>
         <div class="circle-car">
           <img id="car-technical" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
+          <div class="point">
+            <img src="img/plus2.svg" alt="more-info-car">
+            <p><strong>Xenon headlights</strong></p>
+          </div>
+          <div class="point2">
+            <img src="img/plus2.svg" alt="more-info-car">
+            <p><strong>Chrome materials</strong></p>
+          </div>
         </div>
         <div class="technical-infos">
-          <div class="tech-group">
-            <div class="tech_icon">
-              <span>4.4</span>
+          <div class="tech__group">
+            <div class="tech__title">
+              4.4
             </div>
-            <div class="tech_text">
+            <div class="tech__text">
               Acceleration 0–100 km/h in s
             </div>
           </div>
-          <div class="tech-group">
-            <div class="tech_icon">
-              <span>2.1</span>
+          <div class="tech__group">
+            <div class="tech__title">
+              2.1
             </div>
-            <div class="tech_text">
+            <div class="tech__text">
               Consumption combined in l/100 km
             </div>
           </div>
-          <div class="tech-group">
-            <div class="tech_icon">
-              <span>37</span>
+          <div class="tech__group">
+            <div class="tech__title">
+              37
             </div>
-            <div class="tech_text">
+            <div class="tech__text">
               CO2 emissions ing/km
             </div>
           </div>
-          <div class="tech-group">
-            <div class="tech_icon">
-              <span>49</span>
+          <div class="tech__group">
+            <div class="tech__title">
+              49
             </div>
-            <div class="tech_text">
+            <div class="tech__text">
               Electric range in km
             </div>
           </div>
         </div>
-        <div id="the-infos">
-          <div class="consumption">
-            <div class="consumption-content">
+        <div class="technical__data__hidden">
+          <div class="technical__base">
+            <div class="technical__toggle__bis"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></div>
+            <div class="element__wrap">
               <h2>Consumption</h2>
-              <p>CO2 emissions combined in g/km</p>
-              <span>49.0</span>
-              <p>CO2 efficiency</p>
-              <span>A+</span>
+              <p class="element__text">CO2 emissions combined in g/km<strong>49.0</strong></p>
+              <p class="element__text">CO2 efficiency <strong>A+</strong></p>
+              <p class="element__text">Consumption combined in l/100 km <strong>2.1</strong></p>
             </div>
+          </div>
+          <div class="technical__base">
+            <div class="element__wrap">
+              <h2>Weight of the car</h2>
+              <p class="element__text">Unladen weight in kg (DIN)** <strong>1,560</strong></p>
+              <p class="element__text">Max. permissible weight in kg <strong>1,870</strong></p>
+              <p class="element__text">Permitted load in kg <strong>385.0</strong></p>
+              <p class="element__text">Permitted axle load front/rear<strong>895/1,010</strong></p>
+            </div>
+          </div>
+          <div class="technical__base">
+            <div class="element__wrap">
+              <h2>Range and charge time</h2>
+              <p class="element__text">Unladen weight in kg (DIN)**<strong>37</strong></p>
+              <p class="element__text">Max. permissible weight in kg<strong>Up to 30</strong></p>
+              <p class="element__text">Permitted load in kg<strong>440</strong></p>
+              <p class="element__text">Growth capacity of lithium-ion <strong>7.1</strong></p>
+              <p class="element__text">Charging time of high-voltage battery in h at 3.7 kW/12 A (80 %) <strong>2.5</strong></p>
+              <p class="element__text">Charging time of high-voltage battery in h at 16 A (Wallbox) (80 %) <strong>2</strong></p>
+            </div>
+          </div>
+          <div class="technical__base">
+            <div class="element__wrap">
+              <h2>Performance of the car</h2>
+              <p class="element__text">Maximum speed on purely electric power in km/h<strong>120.0</strong></p>
+              <p class="element__text">Maximum speed in km/h <strong>250</strong></p>
+              <p class="element__text">Acceleration from 0–100 km/h in seconds <strong>4.4</strong></p>
+              <p class="element__text">Elasticity from 80–120 km/h in seconds <strong>3.4</strong></p>
+            </div>
+          </div>
+          <div class="technical__download">
+            <button>
+              <a href="img/Catalogue_BMW_i8.pdf" download>Download (PDF)</a>
+            </button>
           </div>
         </div>
       </section>
@@ -162,7 +204,15 @@
 
       <!-- Section Impulse -->
       <section id="impulse">
-        <span>BMW pure impulse program</span>
+        <div class="impulse__intro">
+          <h2 class="impulse__introtitle">BMW i Pure Impulse Programme</h2>
+          <p>
+            The BMW i Pure Impulse Experience Programme opens up a world full of ideas and trends from the fields of travel, culture, gastronomy, design and much more. Like the BMW i8 itself, the programme represents a sustainable and luxury-orientated vision of our life: the world of “Next Premium”.
+          </p>
+          <div class="impulse__more">
+            <p><img src="img/right-arrow.svg" alt="find-out-more"><a href="#">FIND OUT MORE</a></p>
+          </div>
+        </div>
       </section>
 
       <!-- Section other series -->

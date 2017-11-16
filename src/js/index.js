@@ -29,15 +29,37 @@ function menudisplay(e) {
 };
 
 /***** 3 sections content & slider animation *****/
-function moreTechnicalFunction() {
-      var x = document.getElementById("the-infos");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else
-       {
-         x.style.display = "none";
-     }
-}
+// ICI ON RÉCUPÈRE LES ÉLÉMENTS DU DOM
+var displayed = document.querySelector(".technical__data__hidden");
+var button = document.querySelector(".technical__toggle");
+var buttonBis= document.querySelector(".technical__toggle__bis");
+var toggle = false;
+
+// ICI ON ÉCOUTE L'EVENMENET SUR LE BOUTON
+button.addEventListener("click", function () {
+    if(toggle == false) {
+        displayed.classList.add("technical__data");
+        displayed.classList.remove("technical__data__hidden");
+        var scrollPosition = document.querySelector(".technical__data");
+        console.log(scrollPosition.offsetTop);
+        var posi = scrollPosition.offsetTop;
+        toggle = true;
+        document.body.scrollTop += 1016;
+    }
+    else{
+        displayed.classList.remove("technical__data");
+        displayed.classList.add("technical__data__hidden");
+        toggle = false;
+    }
+});
+buttonBis.addEventListener("click", function () {
+    if(toggle == true) {
+        displayed.classList.remove("technical__data");
+        displayed.classList.add("technical__data__hidden");
+        toggle = false;
+        document.body.scrollTop -= 1016;
+    }
+});
 
 
 /* Variables */

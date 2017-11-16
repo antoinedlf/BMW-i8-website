@@ -1,2 +1,41 @@
 #impulse
   background $black
+  background-image url("/img/P90133048-highRes.jpg")
+  background-size cover
+  height 80%
+  display flex
+  align-items center
+  &:before
+    content ''
+    position absolute
+    width 100%
+    height 100%
+    background $black
+    opacity 0.8
+    z-index 1
+  .impulse__intro
+    padding 1rem 2rem
+    z-index 2
+  .impulse__introtitle
+    font-size 2.5rem
+    color $white
+    font-weight 300
+    margin 1em 0
+  p
+    line-height 1.5
+    +large()
+      width 50%
+  .impulse__more
+    padding 1rem 2rem
+    color $blue
+    img
+      width 30px
+      transform translate(-30px,8px)
+    a
+      text-transform none
+      font-size 1rem
+      color $blue
+      transition 0.3s ease all
+      &:hover
+        padding-left 10px
+        color $white
