@@ -1,3 +1,74 @@
+/*** Youtube popup ****/
+
+  .lightbox
+      background-color rgba(0, 0, 0, 0.9)
+      overflow scroll
+      position fixed
+      z-index 1
+      bottom 0
+      right 0
+      left 0
+      top 0
+
+  .modal-overlay
+    position fixed;
+    z-index 99
+    visibility visible
+    opacity 1
+    transition all 0.6s ease-in
+
+  .modal-overlay.is-hidden
+    visibility hidden
+    opacity 0
+
+  .lightbox-container
+      position relative
+      max-width 1200px
+      margin 10% auto
+      display block
+      padding 0 3%
+      height auto
+      z-index 10
+
+  @media screen and (max-width: 768px)
+      .lightbox-container
+          margin-top 10%
+
+  @media screen and (max-width: 414px)
+      .lightbox-container
+          margin-top 13%
+
+  .lightbox-content
+      box-shadow 0 1px 6px rgba(0, 0, 0, 0.7)
+
+  .lightbox-close
+      background transparent
+      position absolute
+      font-weight 300
+      font-size 2rem
+      display block
+      cursor pointer
+      border none
+      color $white
+      top -3rem
+      right 4%
+  .video-container
+      padding-bottom 55%
+      position relative
+      overflow hidden
+      height 0
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed
+      position absolute
+      height 100%
+      width 100%
+      left 0
+      top 0
+
+/*** Section progressive ****/
+
 #progressive
   background-image url(../img/bkg.png)
   background-repeat no-repeat
@@ -29,7 +100,9 @@
       color $warm-grey
       font-size 1.025rem
       font-weight 500
-      margin-top 1.875rem
+      padding 1.5rem 0rem
+      background none
+      border none
       &:before
         margin-right 0.9375rem
         content ''
@@ -40,6 +113,8 @@
         background-repeat no-repeat
         background-size cover
         background-position center
+    &:active
+      outline: none
   .progressive__picture
     // width 100%
     // height 340px
@@ -84,6 +159,8 @@
     padding-top 20%
     text-align center
     padding-bottom 2%
+    a
+      color $grey
   @media (min-width: 1024px)
     margin-top 1rem
     p

@@ -12,6 +12,7 @@ function activeClass(e) {
 function menudisplay(e) {
   var header = document.querySelector(".header");
   var links = document.querySelector(".header ul");
+
   var burger = document.querySelector(".menu-toggle");
   var mq = window.matchMedia("(max-width: 800px)");
 
@@ -20,13 +21,9 @@ function menudisplay(e) {
       header.classList.add("none");
       burger.checked = false;
     }, false);
-
-    burger.addEventListener("click", function(e) {
-      header.classList.remove("none");
-      burger.checked = true;
-    }, false);
   }
 };
+
 
 /***** 3 sections content & slider animation *****/
 // ICI ON RÉCUPÈRE LES ÉLÉMENTS DU DOM

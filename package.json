@@ -4,16 +4,17 @@
   "description": "bmw i8 front end project",
   "main": "gulpfile.js",
   "dependencies": {
-    "smoothscroll": "^0.4.0"
+    "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.4.0",
     "gulp-notify": "^3.0.0",
     "gulp-open": "^2.0.0",
@@ -22,7 +23,6 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-cssnano": "^2.1.2",
     "ip": "^1.1.5"
   },
   "scripts": {

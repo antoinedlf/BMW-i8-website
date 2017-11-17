@@ -9,7 +9,7 @@
   <title>BMW i8</title>
   <meta name="description" content="BMW i8, the most progressive sports car. Available in 2018" />
 
-  <link rel="icon" href="img/logo.svg">
+  <link rel="icon" href="img/BMW-logo.png">
   <link rel="stylesheet" href="css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
@@ -36,10 +36,10 @@
     <nav class="main-nav">
       <div class="logo"><a class="BMW-logo" href="index.html"><img src="img/BMW-logo.png" width="40" height="40" /></a></div>
       <ul class="item">
-        <li><a href="#progressive" onclick="activeClass(this); menudisplay(this);" id="section-progressive" class="active">Overview</a></li>
-        <li><a href="#sections" onclick="activeClass(this); menudisplay(this);" id="section-technology">Technology</a></li>
-        <li><a href="#impulse" onclick="activeClass(this); menudisplay(this);" id="section-impulse">Pure impulse experience</a></li>
-        <li><a href="#findcar" onclick="activeClass(this); menudisplay(this);" id="section-findcar">Find Your BMW</a></li>
+        <li><a data-scroll href="#progressive" onclick="activeClass(this); menudisplay(this);" class="active">Overview</a></li>
+        <li><a data-scroll href="#sections" onclick="activeClass(this); menudisplay(this);">Technology</a></li>
+        <li><a data-scroll href="#impulse" onclick="activeClass(this); menudisplay(this);">Pure impulse experience</a></li>
+        <li><a data-scroll href="#findcar" onclick="activeClass(this); menudisplay(this);">Find Your BMW</a></li>
       </ul>
     </nav>
   </header>
@@ -49,37 +49,52 @@
   <!-- Container page -->
   <div class="container">
     <div class="container--slider">
-
+      <!-- Video modal popup -->
+      <div class="is-hidden modal-overlay">
+        <div id="video" class="lightbox modal">
+          <div class="lightbox-container">
+            <div class="lightbox-content">
+              <span class="lightbox-close">✕</span>
+              <div class="video-container">
+                <iframe id="youtube" width="1200" height="675" src="https://www.youtube.com/embed/s6_6qzkDiJU?showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Section progressive -->
       <section id="progressive">
-          <div class="progressive__content">
+        <div class="progressive__content">
           <h1>BMW-i8</h1>
           <h2>The most progressive sports car</h2>
-          <p class="progressive__texte">Watch the movie</p>
-          </div>
-          <div class="progressive__picture">
-            <img class="progressive__pic2" src="img/car-2.png" alt="">
-            <img class="progressive__pic" src="img/car.png" alt="">
-          </div>
-          <div class="progressive__pic3">
-          <p>SCROLL</p>
-          <img src="img/arrowd.png" alt="">
-          </div>
-        </section>
-        <!-- Section sports car -->
-        <section id="sports-car">
-          <div class="sports-car__description">
-            <h2>The sports car redefined : the BMW i8</h2>
-            <p>The BMW i8 is ready to revolutionise its vehicle class. As the first sports car with the consumption and emission values of a compact car. The strength of the plug-in hybrid lies, among other factors, in the perfect synchronisation of electric motor and combustion engine, which makes itself apparent in maximum efficiency and dynamics on the road. The first sports car that even accelerates the zeitgeis.</p>
-          </div>
-          <div class="sports-car__carousel">
-            <img src="img/C1.jpg" alt="">
-            <img src="img/C2.jpg" alt="">
-            <img src="img/C3.jpg" alt="">
-            <img src="img/C4.jpg" alt="">
-            <img src="img/C5.jpg" alt="">
-          </div>
-        </section>
+          <button onclick="openModal()" class="progressive__texte">Watch the movie</button>
+        </div>
+        <div class="progressive__picture">
+          <img class="progressive__pic2" src="img/car-2.png" alt="bmwi8">
+          <img class="progressive__pic" src="img/car.png" alt="bmwi8-face">
+        </div>
+        <div class="progressive__pic3">
+          <a data-scroll href="#sports-car">
+            <p>SCROLL</p>
+            <img src="img/arrowd.png" alt="arrow">
+          </a>
+        </div>
+      </section>
+      <!-- Section sports car -->
+      <section id="sports-car">
+        <div class="sports-car__description">
+          <h2>The sports car redefined : the BMW i8</h2>
+          <p>The BMW i8 is ready to revolutionise its vehicle class. As the first sports car with the consumption and emission values of a compact car. The strength of the plug-in hybrid lies, among other factors, in the perfect synchronisation of electric
+            motor and combustion engine, which makes itself apparent in maximum efficiency and dynamics on the road. The first sports car that even accelerates the zeitgeis.</p>
+        </div>
+        <div class="sports-car__carousel">
+          <img src="img/C1.jpg" alt="">
+          <img src="img/C2.jpg" alt="">
+          <img src="img/C3.jpg" alt="">
+          <img src="img/C4.jpg" alt="">
+          <img src="img/C5.jpg" alt="">
+        </div>
+      </section>
 
 
       <!-- Section Design, drive & efficency -->
@@ -92,9 +107,9 @@
         </div>
 
         <nav class="nav nav-sections">
-          <a href="#" class="design active">Design</a>
-          <a href="#" class="drive">Drive</a>
-          <a href="#" class="efficiency">Efficency & dynamics</a>
+          <a class="design active">Design</a>
+          <a class="drive">Drive</a>
+          <a class="efficiency">Efficency & dynamics</a>
         </nav>
         <div class="sections-background">
         </div>
@@ -207,7 +222,8 @@
         <div class="impulse__intro">
           <h2 class="impulse__introtitle">BMW i Pure Impulse Programme</h2>
           <p>
-            The BMW i Pure Impulse Experience Programme opens up a world full of ideas and trends from the fields of travel, culture, gastronomy, design and much more. Like the BMW i8 itself, the programme represents a sustainable and luxury-orientated vision of our life: the world of “Next Premium”.
+            The BMW i Pure Impulse Experience Programme opens up a world full of ideas and trends from the fields of travel, culture, gastronomy, design and much more. Like the BMW i8 itself, the programme represents a sustainable and luxury-orientated vision of
+            our life: the world of “Next Premium”.
           </p>
           <div class="impulse__more">
             <p><img src="img/right-arrow.svg" alt="find-out-more"><a href="#">FIND OUT MORE</a></p>
@@ -216,42 +232,42 @@
       </section>
 
       <!-- Section other series -->
-            <section id="BMWseries">
-              <h3 class="bmw__model"> BMW 4 Series <br> Convertible </h3>
+      <section id="BMWseries">
+        <h3 class="bmw__model"> BMW 4 Series <br> Convertible </h3>
 
-              <div class="slides">
-                <div class="slide1">
-                  <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
-                  <p class="starting__at"> Starting at </p>
-                  <p class="p__price"> 40,000€</p>
-                </div>
+        <div class="slides">
+          <div class="slide1">
+            <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
+            <p class="starting__at"> Starting at </p>
+            <p class="p__price"> 40,000€</p>
+          </div>
 
-                <div class="slide2">
-                  <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
-                  <p class="starting__at"> Starting at </p>
-                  <p class="p__price"> 40,000€</p>
-                </div>
+          <div class="slide2">
+            <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
+            <p class="starting__at"> Starting at </p>
+            <p class="p__price"> 40,000€</p>
+          </div>
 
-                <div class="slide3">
-                  <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
-                  <p class="starting__at"> Starting at </p>
-                  <p class="p__price"> 40,000€</p>
-                </div>
+          <div class="slide3">
+            <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
+            <p class="starting__at"> Starting at </p>
+            <p class="p__price"> 40,000€</p>
+          </div>
 
-                <div class="slide4">
-                  <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
-                  <p class="starting__at"> Starting at </p>
-                  <p class="p__price"> 40,000€</p>
-                </div>
+          <div class="slide4">
+            <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
+            <p class="starting__at"> Starting at </p>
+            <p class="p__price"> 40,000€</p>
+          </div>
 
-                <div class="slide5">
-                  <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
-                  <p class="starting__at"> Starting at </p>
-                  <p class="p__price"> 40,000€</p>
-                </div>
+          <div class="slide5">
+            <img id="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling">
+            <p class="starting__at"> Starting at </p>
+            <p class="p__price"> 40,000€</p>
+          </div>
 
-              </div>
-            </section>
+        </div>
+      </section>
 
       <!-- Section find your car -->
       <section id="findcar">
@@ -264,16 +280,14 @@
       </section>
 
       <!-- container--slider -->
-      </div>
-
-      <div class="footer">
-        <h1>Footer</h1>
-      </div>
-
-      <!-- Container -->
     </div>
+    <!-- Container -->
+  </div>
 
-    <script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('.header a[href*="#"], .progressive__pic3 a[href*="#"]');
+  </script>
 
 
 </body>
