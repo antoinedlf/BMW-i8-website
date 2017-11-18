@@ -1,3 +1,8 @@
+window.onload = function(){
+  document.getElementById("content-loader").style.opacity = "0";
+  document.getElementById("content-loader").style.zIndex = "0";
+}
+
 /***** Menu items color *****/
 
 var menuactive       = document.querySelector(".header .active");

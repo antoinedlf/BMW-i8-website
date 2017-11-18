@@ -1,5 +1,4 @@
 /***** Youtube popup modal ******/
-
 class Modal {
   constructor(overlay) {
     this.overlay = overlay;
@@ -8,6 +7,7 @@ class Modal {
     overlay.addEventListener('click', e => {
       if (e.srcElement.id === this.overlay.id) {
         this.close();
+        // document.getElementById('youtube').pauseVideo();
       }
     });
   }
