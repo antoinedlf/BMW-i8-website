@@ -3,11 +3,11 @@ class Modal {
   constructor(overlay) {
     this.overlay = overlay;
     const closeButton = overlay.querySelector('.lightbox-close')
-    closeButton.addEventListener('click', this.close.bind(this));
+    closeButton.addEventListener('click', this.close.bind(this)
+  );
     overlay.addEventListener('click', e => {
       if (e.srcElement.id === this.overlay.id) {
         this.close();
-        // document.getElementById('youtube').pauseVideo();
       }
     });
   }

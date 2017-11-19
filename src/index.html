@@ -136,7 +136,7 @@
       <!-- Section Technical -->
       <section id="technical">
         <h2 id="technical__introtitle">Technical data</h2>
-        <div class="technical__toggle"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></div>
+        <div class="technical__toggle"><a data-scroll href="#technical-infos"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
         <p class="technical__introduction">
           The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
         </p>
@@ -151,7 +151,7 @@
             <p><strong>Chrome materials</strong></p>
           </div>
         </div>
-        <div class="technical-infos">
+        <div id="technical-infos" class="technical-infos">
           <div class="tech__group">
             <div class="tech__title">
               4.4
@@ -187,7 +187,7 @@
         </div>
         <div class="technical__data__hidden">
           <div class="technical__base">
-            <div class="technical__toggle__bis"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></div>
+            <div class="technical__toggle__bis"><a data-scroll href="#technical"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
             <div class="element__wrap">
               <h2>Consumption</h2>
               <p class="element__text">CO2 emissions combined in g/km<strong>49.0</strong></p>
@@ -225,9 +225,11 @@
             </div>
           </div>
           <div class="technical__download">
+            <a href="img/Catalogue_BMW_i8.pdf">
             <button>
-              <a href="img/Catalogue_BMW_i8.pdf" download>Download (PDF)</a>
+              Download (PDF)
             </button>
+          </a>
           </div>
         </div>
       </section>
@@ -242,7 +244,7 @@
             our life: the world of “Next Premium”.
           </p>
           <div class="impulse__more">
-            <p><img src="img/right-arrow.svg" alt="find-out-more"><a href="#">FIND OUT MORE</a></p>
+            <p><img src="img/right-arrow.svg" alt="find-out-more"><a data-scroll href="#impulse">FIND OUT MORE</a></p>
           </div>
         </div>
       </section>
@@ -301,7 +303,7 @@
 
   <script src="js/main.min.js"></script>
   <script>
-    var scroll = new SmoothScroll('.header a[href*="#"], .progressive__pic3 a[href*="#"]');
+    var scroll = new SmoothScroll('.header a[href*="#"], .progressive__pic3 a[href*="#"], .impulse__more a[href*="#"], .technical__toggle__bis a[href*="#"], .technical__toggle a[href*="#"]');
   </script>
 
 
