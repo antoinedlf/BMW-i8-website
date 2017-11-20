@@ -4,6 +4,7 @@
   "description": "bmw i8 front end project",
   "main": "gulpfile.js",
   "dependencies": {
+    "npm-script": "^1.2.0",
     "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
@@ -28,7 +29,7 @@
     "ip": "^1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start" : "gulp"
   },
   "repository": {
     "type": "git",

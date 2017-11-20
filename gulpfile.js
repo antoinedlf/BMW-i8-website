@@ -77,8 +77,8 @@ gulp.task('js', () =>
     .pipe(plumber())
     .pipe(coffee())
     .pipe(sourcemaps.init())
-       .pipe(babel({
-           presets: ['es2015']
+    .pipe(babel({
+           presets: ['es2016']
     }))
 		.pipe(concat('main.min.js'))
     .pipe(uglify())

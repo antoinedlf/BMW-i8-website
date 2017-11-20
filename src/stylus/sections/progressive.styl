@@ -27,20 +27,13 @@
 
   .lightbox-container
       position relative
-      max-width 1200px
+      max-width 980px
       margin 10% auto
       display block
       padding 0 3%
       height auto
       z-index 10
-
-  @media screen and (max-width: 768px)
-      .lightbox-container
-          margin-top 10%
-
-  @media screen and (max-width: 414px)
-      .lightbox-container
-          margin-top 13%
+      margin-top 8rem
 
   .lightbox-content
       box-shadow 0 1px 6px rgba(0, 0, 0, 0.7)
@@ -54,8 +47,8 @@
       cursor pointer
       border none
       color $white
-      top -3rem
       right 4%
+      top -3rem
   .video-container
       padding-bottom 55%
       position relative
@@ -96,13 +89,13 @@
       text-align left
       font-weight 500
       color $white
-      width 21.3rem
-      @media (min-width: 768px)
+      width 16rem
+      +medium()
         width 38rem
         font-size 3rem
     .progressive__texte
       color $warm-grey
-      font-size 1.025rem
+      font-size $lfont
       font-weight 500
       padding 1.5rem 0rem
       background none

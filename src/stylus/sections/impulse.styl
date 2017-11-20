@@ -1,7 +1,7 @@
 #impulse
   background-image url("https://antoinedlf.com/bmw/img/pureimpulse.jpg")
   background-size cover
-  height 75%
+  height 100%
   display flex
   align-items center
   &:before
@@ -13,18 +13,24 @@
     opacity 0.8
     z-index 1
     top 0
+  +large()
+    height 75%
   .impulse__intro
-    padding 1rem 2rem
+    margin $ml
     z-index 2
   .impulse__introtitle
-    font-size 2.5rem
+    font-size 2rem
     color $white
     font-weight 300
     margin 1em 0
+    +large()
+      font-size 2.5rem
   p
     line-height 1.5
+    font-size $sfont
     +large()
       width 50%
+      font-size $lfont
   .impulse__more
     padding 1rem 2rem
     color $blue
