@@ -9,9 +9,9 @@
   .technical__introduction
     margin-left 15px
   .technical__toggle
+    margin-top -1rem
     position absolute
     right 0
-    margin-top -1rem
     transform translate(-20px,-60px)
     cursor pointer
     outline none
@@ -19,12 +19,12 @@
     width 50px
     @media (max-width: 600px)
       #technical__intro
-        font-size $sfont
         color $warm-grey
+        font-size $sfont
         line-height 1.5
         text-align left
         margin-left 1rem
-  .circle-car
+  .technical__circleCar
     position relative
     z-index 0
     display flex
@@ -33,7 +33,7 @@
     padding-top 10%
     +large()
       padding-top 1%
-    img
+    .technical__carImg
       width 100%
       padding-top 15%
       margin auto
@@ -61,6 +61,8 @@
       position absolute
       display flex
       transform translate(-50px, 40px)
+      img
+        width 100%
       +medium()
         transform translate(-80px, 70px)
       +large()
@@ -68,36 +70,32 @@
         height 30px
         transform translate(-90px, 50px)
       &:hover
-        p
-          visibility visible
+        .technical__pointData
           opacity 1
-          transform translateY(10px)
+      .technical__pointData
+        opacity 0
+        transition opacity 1s, width 1s ease
+        &:before
+          content ''
+          background $blue
+          position absolute
+          width 100px
+          height 2px
+          top 0
+        strong
+          position absolute
+          left 100px
+          bottom 10px
           font-size 1rem
           color $blue
-          display block
-          &:before
-            content ''
-            background $blue
-            position absolute
-            width 100px
-            height 2px
-            top 5px
-          strong
-            position absolute
-            left 100px
-            bottom 10px
-            font-size 1rem
-            color $warm-grey
-      p
-        visibility hidden
-        opacity 0
-        transition visibility 0s, opacity 0.5s, width 1s ease
     .point2
       width 20px
       height 20px
       position absolute
       display flex
       transform translate(-120px, 0px)
+      img
+        width 100%
       +medium()
         transform translate(-250px, 0px)
       +large()
@@ -105,34 +103,29 @@
         height 30px
         transform translate(-300px, 0px)
       &:hover
-        p
-          visibility visible
+        .technical__pointData
           opacity 1
-          transform translateY(10px)
-          display block
-          &:before
-            content ''
-            background $blue
-            position absolute
-            width 90px
-            height 2px
-            bottom 60px
-            right 0
-            transform rotate(50deg)
-          strong
-            position absolute
-            right 0
-            bottom 100px
-            font-size 1rem
-            color $warm-grey
-      p
-        visibility hidden
+      .technical__pointData
         opacity 0
-        transition visibility 0s, opacity 0.5s, width 1s ease
+        transition opacity 1s, width 1s ease
+        &:before
+          content ''
+          background $blue
+          position absolute
+          width 90px
+          height 2px
+          bottom 60px
+          right 0
+          transform rotate(50deg)
+        strong
+          position absolute
+          right 0
+          bottom 100px
+          font-size 1rem
+          color $blue
   .technical-infos
     padding 10px
     display flex
-    flex-wrap wrap-reverse
     overflow hidden
     align-items center
     justify-content center
@@ -197,7 +190,7 @@
         width auto
         height auto
         background $blue
-        color $white
         padding 1em
         a
+          color $white
           text-transform none

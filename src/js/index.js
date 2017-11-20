@@ -30,14 +30,15 @@ function menudisplay(e) {
 }
 
 
-/***** 3 sections content & slider animation *****/
-// ICI ON RÉCUPÈRE LES ÉLÉMENTS DU DOM
+
+/**** Technical data + ****/
+
 const displayed = document.querySelector(".technical__data__hidden");
 const button = document.querySelector(".technical__toggle");
-const buttonBis= document.querySelector(".technical__toggle__bis");
+const buttonBis = document.querySelector(".technical__toggle__bis");
 let toggle = false;
 
-// ICI ON ÉCOUTE L'EVENEMENT SUR LE BOUTON
+// listening button event //
 button.addEventListener("click", () => {
     if(toggle == false) {
         displayed.classList.add("technical__data");
@@ -57,6 +58,7 @@ buttonBis.addEventListener("click", () => {
         toggle = false;
     }
 });
+
 
 
 /* Variables */

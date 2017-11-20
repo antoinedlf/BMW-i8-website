@@ -4,6 +4,7 @@
   "description": "bmw i8 front end project",
   "main": "gulpfile.js",
   "dependencies": {
+    "gulp-minify": "^2.1.0",
     "npm-script": "^1.2.0",
     "smooth-scroll": "^12.1.5"
   },
@@ -29,7 +30,7 @@
     "ip": "^1.1.5"
   },
   "scripts": {
-  "start" : "gulp"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

@@ -13,6 +13,43 @@
   <link rel="stylesheet" href="css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Oswald:300" rel="stylesheet">
 
+  <script async type="text/javascript">
+    function initMap() {
+      var uluru = {
+        lat: 48.846944,
+        lng: 2.288706
+      };
+      var gmap = new google.maps.Map(document.getElementById('gmap'), {
+        zoom: 10,
+        center: uluru,
+        styles: [{
+          "featureType": "all",
+          "elementType": "all",
+          "stylers": [{
+              "invert_lightness": true
+            },
+            {
+              "saturation": 10
+            },
+            {
+              "lightness": 30
+            },
+            {
+              "gamma": 0.5
+            },
+            {
+              "hue": "#435158"
+            }
+          ]
+        }]
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: gmap
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzraul9_g4cWV2TeCeSCMCJbWMpBCPdk&callback=initMap"></script>
 </head>
 
 <body>
@@ -140,15 +177,15 @@
         <p class="technical__introduction">
           The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
         </p>
-        <div class="circle-car">
-          <img id="car-technical" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
+        <div class="technical__circleCar">
+          <img class="technical__carImg" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
           <div class="point">
             <img src="img/plus2.svg" alt="more-info-car">
-            <p><strong>Xenon headlights</strong></p>
+            <p class="technical__pointData"><strong>Xenon headlights</strong></p>
           </div>
           <div class="point2">
             <img src="img/plus2.svg" alt="more-info-car">
-            <p><strong>Chrome materials</strong></p>
+            <p class="technical__pointData"><strong>Chrome materials</strong></p>
           </div>
         </div>
         <div class="technical-infos">
@@ -180,7 +217,7 @@
             <div class="tech__title">
               49
             </div>
-            <div id="technical-infos" class="tech__text">
+            <div class="tech__text" id="technical-infos">
               Electric range in km
             </div>
           </div>
@@ -225,15 +262,12 @@
             </div>
           </div>
           <div class="technical__download">
-            <a href="img/Catalogue_BMW_i8.pdf">
             <button>
-              Download (PDF)
+              <a href="img/Catalogue_BMW_i8.pdf" download>Download (PDF)</a>
             </button>
-          </a>
           </div>
         </div>
       </section>
-
 
       <!-- Section Impulse -->
       <section id="impulse">
@@ -287,8 +321,12 @@
       </section>
 
       <!-- Section find your car -->
-      <section id="findcar">
-        <span>Find your car</span>
+      <section id="findCar">
+        <div class="findCar__intro">
+          <h3 class="findCar__introtitle">EXPERIENCE</h3>
+          <p> Find your BMW I8</p>
+        </div>
+        <div class="technical__map" id="gmap"></div>
       </section>
 
       <!-- Section buy NOW -->

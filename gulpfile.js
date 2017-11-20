@@ -1,8 +1,6 @@
 const gulp         = require('gulp')
 const plumber      = require('gulp-plumber')
-const coffee       = require('gulp-coffee')
 const notify       = require('gulp-notify')
-const sourcemaps   = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 const rename       = require('gulp-rename')
 const imagemin     = require('gulp-imagemin')
@@ -12,7 +10,6 @@ const htmlmin      = require('gulp-htmlmin')
 const stylus       = require('gulp-stylus')
 const concat       = require('gulp-concat')
 const babel        = require('gulp-babel')
-const uglify       = require('gulp-uglify')
 const ip           = require('ip').address()
 
 
@@ -73,17 +70,11 @@ gulp.task( 'css', function()
 
 // JS task
 gulp.task('js', () =>
-	gulp.src('src/js/*.js')
-    .pipe(plumber())
-    .pipe(coffee())
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-           presets: ['es2016']
-    }))
-		.pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest(config.dist + 'js'))
+ gulp.src('src/js/*.js')
+      .pipe(babel())
+      .pipe( plumber() )
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest(config.dist + 'js'))
 );
 
 gulp.task('watch', () => {
