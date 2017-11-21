@@ -1,4 +1,4 @@
-
+/**** MENU ****/
 .menu-toggle
   display none
 .mobile-bar
@@ -37,13 +37,25 @@
       font-size 1.5rem
       border-top 1px rgba(254, 254, 254, 0.2) solid
       color $white
+    li
+      background-size cover
+      background-position center
+      background-repeat no-repeat
       a
-        padding 2.8rem
+        padding 2.6rem 0.4rem 2.6rem 2.6rem
         font-size 1.6rem
         color $white
         background-color transparent
       .BMW-logo
         padding 2rem
+    li:nth-child(1)
+      background-image url(../img/mobile-overview.png)
+    li:nth-child(2)
+      background-image url(../img/mobile-technology.png)
+    li:nth-child(3)
+      background-image url(../img/mobile-impulse.png)
+    li:nth-child(4)
+      background-image url(../img/mobile-find.png)
 
 
 /**** Menu Icon ****/
@@ -132,7 +144,6 @@
     &:hover
       color $blue
 
-
 @media (min-width: 940px)
   .mobile-bar
     display none
@@ -157,7 +168,6 @@
     ul
       display flex
       flex-wrap wrap
-
     li
       display inline-block
       border none

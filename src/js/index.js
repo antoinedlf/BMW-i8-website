@@ -61,7 +61,7 @@ buttonBis.addEventListener("click", () => {
 
 
 
-/* Variables */
+/* Vars */
 const content     = document.querySelector(".sectionp");
 const title       = document.querySelector(".sectionh1");
 const button1     = document.querySelector(".design");

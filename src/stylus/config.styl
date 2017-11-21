@@ -6,9 +6,10 @@ $white = #fefefe
 $technical = #eeeeee
 
 $font = 'ApercuPro'
-$opensans = 'Open Sans'
 $bold = 'Apercu Pro'
 $letter = 'Oswald'
+$semibold = 'ApercuMediumPro'
+$italic = 'ApercuProItalic'
 
 $sfont = 0.9rem
 $lfont = 1rem
@@ -16,12 +17,16 @@ $ml = 10%
 
 $medium = 768px
 $large = 1024px
+$medlarge = 1366px
 
 medium()
   @media (min-width: $medium)
     {block}
 large()
   @media (min-width: $large)
+    {block}
+medlarge()
+  @media (min-height: $medlarge)
     {block}
 
 .surtitre
