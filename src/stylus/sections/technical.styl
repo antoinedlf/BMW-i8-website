@@ -2,12 +2,19 @@
   background $technical
   height auto !important
   #technical__introtitle
-    font-size 1.5rem
-    color $blue
     padding 1rem
-    line-height 3
+    padding-top 4.375rem
+    padding-left 10%
+    font-size 1.625rem
+    width 99%
+    font-weight 500
+    text-align left
+    color $blue
   .technical__introduction
-    margin-left 15px
+    padding-left 10%
+    font-size: 1rem
+    color: $grey
+    padding-top 4.375rem
   .technical__toggle
     margin-top -1rem
     position absolute
@@ -126,9 +133,12 @@
   .technical-infos
     padding 10px
     display flex
+    flex-wrap wrap
     overflow hidden
     align-items center
     justify-content center
+    +large()
+      flex-wrap nowrap
   .tech__group
     text-align center
     width 50%

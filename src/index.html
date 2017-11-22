@@ -12,7 +12,7 @@
   <link rel="icon" href="img/BMW-logo.png">
   <link rel="stylesheet" href="css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzraul9_g4cWV2TeCeSCMCJbWMpBCPdk&callback"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCrm33SKDgF61uEKOECvjtymkT2KyPXzs&libraries=places"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 </head>
@@ -271,6 +271,9 @@
       <div class="findCar__intro">
         <h3 class="findCar__introtitle">EXPERIENCE</h3>
         <p> Find your BMW I8</p>
+        <div class="findCar__tab">
+            <input id="pac-input" class="controls findCar__search" type="text" placeholder="Chercher un concessionnaire...">
+        </div>
       </div>
       <div class="technical__map" id="map"></div>
     </section>

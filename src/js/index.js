@@ -123,6 +123,11 @@ button3.addEventListener("click",e => {
 },false);
 
 var locations = [
+    ['BMW Pontoise', 49.048229, 2.080446, 14],
+    ['BMW Noisy', 48.898894, 2.445224, 13],
+    ['BMW Courbevoie', 48.902632, 2.258352, 12],
+    ['BMW Plaisir', 48.799758, 1.952001, 11],
+    ['BMW Montigny', 48.793009, 2.044932, 10],
     ['BMW Paris Velizy', 48.782113, 2.175893, 9],
     ['BMW George V', 48.869484, 2.301364, 8],
     ['BMW MINI NEUBAUER Montmartre', 48.891604, 2.327979, 7],
@@ -166,6 +171,13 @@ var marker, i;
 var markers = [];
 var image = './img/point-bmw.svg';
 
+var input = /** @type {!HTMLInputElement} */(
+    document.getElementById('pac-input'));
+
+var autocomplete = new google.maps.places.Autocomplete(input);
+autocomplete.bindTo('bounds', map);
+
+
 for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
         animation: google.maps.Animation.DROP,
@@ -184,9 +196,52 @@ for (i = 0; i < locations.length; i++) {
             infowindow.open(map, marker);
         }
     })(marker, i));
+
+    autocomplete.addListener('place_changed', function() {
+        infowindow.close();
+        marker.setVisible(false);
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            // User entered the name of a Place that was not suggested and
+            // pressed the Enter key, or the Place Details request failed.
+            window.alert("No details available for input: '" + place.name + "'");
+            return;
+        }
+
+        // If the place has a geometry, then present it on a map.
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+        }
+        marker.setIcon(/** @type {google.maps.Icon} */({
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(35, 35)
+        }));
+        marker.setPosition(place.geometry.location);
+        marker.setVisible(true);
+
+        var address = '';
+        if (place.address_components) {
+            address = [
+                (place.address_components[0] && place.address_components[0].short_name || ''),
+                (place.address_components[1] && place.address_components[1].short_name || ''),
+                (place.address_components[2] && place.address_components[2].short_name || '')
+            ].join(' ');
+        }
+
+        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+        infowindow.open(map, marker);
+    });
+
 }
 
 console.log(markers[0]);
+
 
 window.sr = ScrollReveal();
 sr.reveal('.progressive__content', { duration: 2000, origin: 'left', viewFactor: 0.1, reset: true, scale: 1 });
