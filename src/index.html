@@ -12,319 +12,283 @@
   <link rel="icon" href="img/BMW-logo.png">
   <link rel="stylesheet" href="css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzraul9_g4cWV2TeCeSCMCJbWMpBCPdk&callback"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-  <script async type="text/javascript">
-    function initMap() {
-      var uluru = {
-        lat: 48.846944,
-        lng: 2.288706
-      };
-      var gmap = new google.maps.Map(document.getElementById('gmap'), {
-        zoom: 10,
-        center: uluru,
-        styles: [{
-          "featureType": "all",
-          "elementType": "all",
-          "stylers": [{
-              "invert_lightness": true
-            },
-            {
-              "saturation": 10
-            },
-            {
-              "lightness": 30
-            },
-            {
-              "gamma": 0.5
-            },
-            {
-              "hue": "#435158"
-            }
-          ]
-        }]
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: gmap
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzraul9_g4cWV2TeCeSCMCJbWMpBCPdk&callback=initMap"></script>
 </head>
 
 <body>
 
-  <div id="content-loader">
-    <div class="wrapper">
-      <div class="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<div id="content-loader">
+  <div class="wrapper">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
+</div>
 
-  <!-- Mobile Bar & Menu Icon -->
-  <input type="checkbox" class="menu-toggle" id="menu-toggle">
-  <div class="mobile-bar">
-    <nav>
-      <ul>
-        <li class="mobile-logo"><a href="#"><img src="img/BMW-logo.png" width="40" height="40" /></a></li>
-        <li class="mobile-title"><a href="#">BMW i8</a></li>
-        <label for="menu-toggle" class="menu-icon">
+<!-- Mobile Bar & Menu Icon -->
+<input type="checkbox" class="menu-toggle" id="menu-toggle">
+<div class="mobile-bar">
+  <nav>
+    <ul>
+      <li class="mobile-logo"><a href="#"><img src="img/BMW-logo.png" width="40" height="40" /></a></li>
+      <li class="mobile-title"><a href="#">BMW i8</a></li>
+      <label for="menu-toggle" class="menu-icon">
         <span></span>
       </label>
-      </ul>
-    </nav>
-  </div>
+    </ul>
+  </nav>
+</div>
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <div class="logo"><a class="BMW-logo" href="index.html"><img src="img/BMW-logo.png" width="40" height="40" /></a></div>
-      <ul class="item">
-        <li><a data-scroll href="#progressive" onclick="activeClass(this); menudisplay(this);" class="active">Overview</a></li>
-        <li><a data-scroll href="#sections" onclick="activeClass(this); menudisplay(this);">Technology</a></li>
-        <li><a data-scroll href="#impulse" onclick="activeClass(this); menudisplay(this);">Pure impulse experience</a></li>
-        <li><a data-scroll href="#findcar" onclick="activeClass(this); menudisplay(this);">Find Your BMW</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- Header -->
+<!-- Header -->
+<header class="header">
+  <nav class="main-nav">
+    <div class="logo"><a class="BMW-logo" href="index.html"><img src="img/BMW-logo.png" width="40" height="40" /></a></div>
+    <ul class="item">
+      <li><a data-scroll href="#progressive" onclick="activeClass(this); menudisplay(this);" class="active">Overview</a></li>
+      <li><a data-scroll href="#sections" onclick="activeClass(this); menudisplay(this);">Technology</a></li>
+      <li><a data-scroll href="#impulse" onclick="activeClass(this); menudisplay(this);">Pure impulse experience</a></li>
+      <li><a data-scroll href="#findcar" onclick="activeClass(this); menudisplay(this);">Find Your BMW</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Header -->
 
 
-  <!-- Container page -->
-  <div class="container">
-    <div class="container--slider">
-      <!-- Video modal popup -->
-      <div class="is-hidden modal-overlay">
-        <div id="video" class="lightbox modal">
-          <div class="lightbox-container">
-            <div class="lightbox-content">
-              <span class="lightbox-close">✕</span>
-              <div class="video-container">
-                <iframe id="youtube" width="1200" height="675" src="https://www.youtube.com/embed/s6_6qzkDiJU?showinfo=0" frameborder="0" allowfullscreen></iframe>
-              </div>
+<!-- Container page -->
+<div class="container">
+  <div class="container--slider">
+    <!-- Video modal popup -->
+    <div class="is-hidden modal-overlay">
+      <div id="video" class="lightbox modal">
+        <div class="lightbox-container">
+          <div class="lightbox-content">
+            <span class="lightbox-close">✕</span>
+            <div class="video-container">
+              <iframe id="youtube" width="1200" height="675" src="https://www.youtube.com/embed/s6_6qzkDiJU?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
-      <!-- Section progressive -->
-      <section id="progressive">
-        <div class="progressive__content">
-          <h1>BMW-i8</h1>
-          <h2>The most progressive sports car</h2>
-          <button onclick="openModal()" class="progressive__texte">Watch the movie</button>
-        </div>
-        <div class="progressive__picture">
-          <img class="progressive__pic2" src="img/car-2.png" alt="bmwi8">
-          <img class="progressive__pic" src="img/car.png" alt="bmwi8-face">
-        </div>
-        <div class="progressive__pic3">
-          <a data-scroll href="#sports-car">
-            <p>SCROLL</p>
-            <img src="img/arrowd.png" alt="arrow">
-          </a>
-        </div>
-      </section>
-      <!-- Section sports car -->
-      <section id="sports-car">
-        <div class="sports-car__description">
-          <h2>The sports car redefined : The BMW i8</h2>
-          <p>The BMW i8 is ready to revolutionise its vehicle class. As the first sports car with the consumption and emission values of a compact car. The strength of the plug-in hybrid lies, among other factors, in the perfect synchronisation of electric
-            motor and combustion engine, which makes itself apparent in maximum efficiency and dynamics on the road. The first sports car that even accelerates the zeitgeis.</p>
-        </div>
-        <div class="sports-car__carousel">
-          <img src="img/C1.jpg" alt="">
-          <img src="img/C2.jpg" alt="">
-          <img src="img/C3.jpg" alt="">
-          <img src="img/C4.jpg" alt="">
-          <img src="img/C5.jpg" alt="">
-        </div>
-      </section>
-
-
-      <!-- Section Design, drive & efficency -->
-      <section id="sections">
-        <div class="section-content">
-          <h1 class="sectionh1">Everything appears to come from a unified whole.</h1>
-          <p class="sectionp">
-            Long wheelbase, short overhangs, a solid stance as it crouches on the street: the BMW i8 has all the characteristics of a full-blooded sports car.
-          </p>
-        </div>
-
-        <nav class="nav nav-sections">
-          <a class="design active">Design</a>
-          <a class="drive">Drive</a>
-          <a class="efficiency">Efficency & dynamics</a>
-        </nav>
-        <div class="sections-background">
-        </div>
-      </section>
-
-
-
-      <!-- Section Technical -->
-      <section id="technical">
-        <h2 id="technical__introtitle">Technical data</h2>
-        <div class="technical__toggle"><a data-scroll href="#technical-infos"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
-        <p class="technical__introduction">
-          The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
-        </p>
-        <div class="technical__circleCar">
-          <img class="technical__carImg" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
-          <div class="point">
-            <img src="img/plus2.svg" alt="more-info-car">
-            <p class="technical__pointData"><strong>Xenon headlights</strong></p>
-          </div>
-          <div class="point2">
-            <img src="img/plus2.svg" alt="more-info-car">
-            <p class="technical__pointData"><strong>Chrome materials</strong></p>
-          </div>
-        </div>
-        <div class="technical-infos">
-          <div class="tech__group">
-            <div class="tech__title">
-              4.4
-            </div>
-            <div class="tech__text">
-              Acceleration 0–100 km/h in s
-            </div>
-          </div>
-          <div class="tech__group">
-            <div class="tech__title">
-              2.1
-            </div>
-            <div class="tech__text">
-              Consumption combined in l/100 km
-            </div>
-          </div>
-          <div class="tech__group">
-            <div class="tech__title">
-              37
-            </div>
-            <div class="tech__text">
-              CO2 emissions ing/km
-            </div>
-          </div>
-          <div class="tech__group">
-            <div class="tech__title">
-              49
-            </div>
-            <div class="tech__text" id="technical-infos">
-              Electric range in km
-            </div>
-          </div>
-        </div>
-        <div class="technical__data__hidden">
-          <div class="technical__base">
-            <div class="technical__toggle__bis"><a data-scroll href="#technical"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
-            <div class="element__wrap">
-              <h2>Consumption</h2>
-              <p class="element__text">CO2 emissions combined in g/km<strong>49.0</strong></p>
-              <p class="element__text">CO2 efficiency <strong>A+</strong></p>
-              <p class="element__text">Consumption combined in l/100 km <strong>2.1</strong></p>
-            </div>
-          </div>
-          <div class="technical__base">
-            <div class="element__wrap">
-              <h2>Weight of the car</h2>
-              <p class="element__text">Unladen weight in kg (DIN)** <strong>1,560</strong></p>
-              <p class="element__text">Max. permissible weight in kg <strong>1,870</strong></p>
-              <p class="element__text">Permitted load in kg <strong>385.0</strong></p>
-              <p class="element__text">Permitted axle load front/rear<strong>895/1,010</strong></p>
-            </div>
-          </div>
-          <div class="technical__base">
-            <div class="element__wrap">
-              <h2>Range and charge time</h2>
-              <p class="element__text">Unladen weight in kg (DIN)**<strong>37</strong></p>
-              <p class="element__text">Max. permissible weight in kg<strong>Up to 30</strong></p>
-              <p class="element__text">Permitted load in kg<strong>440</strong></p>
-              <p class="element__text">Growth capacity of lithium-ion <strong>7.1</strong></p>
-              <p class="element__text">Charging time of high-voltage battery in h at 3.7 kW/12 A (80 %) <strong>2.5</strong></p>
-              <p class="element__text">Charging time of high-voltage battery in h at 16 A (Wallbox) (80 %) <strong>2</strong></p>
-            </div>
-          </div>
-          <div class="technical__base">
-            <div class="element__wrap">
-              <h2>Performance of the car</h2>
-              <p class="element__text">Maximum speed on purely electric power in km/h<strong>120.0</strong></p>
-              <p class="element__text">Maximum speed in km/h <strong>250</strong></p>
-              <p class="element__text">Acceleration from 0–100 km/h in seconds <strong>4.4</strong></p>
-              <p class="element__text">Elasticity from 80–120 km/h in seconds <strong>3.4</strong></p>
-            </div>
-          </div>
-          <div class="technical__download">
-            <button>
-              <a href="img/Catalogue_BMW_i8.pdf" download>Download (PDF)</a>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Impulse -->
-      <section id="impulse">
-        <div class="impulse__intro">
-          <h2 class="impulse__introtitle">BMW i Pure Impulse Programme</h2>
-          <p>
-            The BMW i Pure Impulse Experience Programme opens up a world full of ideas and trends from the fields of travel, culture, gastronomy, design and much more. Like the BMW i8 itself, the programme represents a sustainable and luxury-orientated vision of
-            our life: the world of “Next Premium”.
-          </p>
-          <div class="impulse__more">
-            <p><img src="img/right-arrow.svg" alt="find-out-more"><a data-scroll href="#impulse">FIND OUT MORE</a></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section other series -->
-      <section id="BMWseries">
-        <h3 class="bmw__model">BMW 4 Series<br>Convertible</h3>
-        <div>
-          <ul id="slide-container">
-            <li class="l1"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
-            <li class="l2"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
-            <li class="l3"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
-            <li class="l4"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
-            <li class="l5"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
-          </ul>
-          <div class="price__car">
-            <p class="starting__at">Starting at</p>
-            <p class="p__price">40,000€</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section find your car -->
-      <section id="findCar">
-        <div class="findCar__intro">
-          <h3 class="findCar__introtitle">EXPERIENCE</h3>
-          <p> Find your BMW I8</p>
-        </div>
-        <div class="technical__map" id="gmap"></div>
-      </section>
-
-      <!-- Section buy NOW -->
-      <section id="experience">
-        <span>Buy Now</span>
-      </section>
-
-      <!-- container--slider -->
     </div>
-    <!-- Container -->
+    <!-- Section progressive -->
+    <section id="progressive">
+      <div class="progressive__content">
+        <h1>BMW-i8</h1>
+        <h2>The most progressive sports car</h2>
+        <button onclick="openModal()" class="progressive__texte">Watch the movie</button>
+      </div>
+      <div class="progressive__picture">
+        <img class="progressive__pic2" src="img/car-2.png" alt="bmwi8">
+        <img class="progressive__pic" src="img/car.png" alt="bmwi8-face">
+      </div>
+      <div class="progressive__pic3">
+        <a data-scroll href="#sports-car">
+          <p>SCROLL</p>
+          <img src="img/arrowd.png" alt="arrow">
+        </a>
+      </div>
+    </section>
+    <!-- Section sports car -->
+    <section id="sports-car">
+      <div class="sports-car__description">
+        <h2>The sports car redefined : The BMW i8</h2>
+        <p>The BMW i8 is ready to revolutionise its vehicle class. As the first sports car with the consumption and emission values of a compact car. The strength of the plug-in hybrid lies, among other factors, in the perfect synchronisation of electric
+          motor and combustion engine, which makes itself apparent in maximum efficiency and dynamics on the road. The first sports car that even accelerates the zeitgeis.</p>
+      </div>
+      <div class="sports-car__carousel">
+        <img src="img/C1.jpg" alt="">
+        <img src="img/C2.jpg" alt="">
+        <img src="img/C3.jpg" alt="">
+        <img src="img/C4.jpg" alt="">
+        <img src="img/C5.jpg" alt="">
+      </div>
+    </section>
+
+
+    <!-- Section Design, drive & efficency -->
+    <section id="sections">
+      <div class="section-content">
+        <h1 class="sectionh1">Everything appears to come from a unified whole.</h1>
+        <p class="sectionp">
+          Long wheelbase, short overhangs, a solid stance as it crouches on the street: the BMW i8 has all the characteristics of a full-blooded sports car.
+        </p>
+      </div>
+
+      <nav class="nav nav-sections">
+        <a class="design active">Design</a>
+        <a class="drive">Drive</a>
+        <a class="efficiency">Efficency & dynamics</a>
+      </nav>
+      <div class="sections-background">
+      </div>
+    </section>
+
+
+
+    <!-- Section Technical -->
+    <section id="technical">
+      <h2 id="technical__introtitle">Technical data</h2>
+      <div class="technical__toggle"><a data-scroll href="#technical-infos"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
+      <p class="technical__introduction">
+        The BMW i8 is a plug-in-hybrid that brings together the advantages of innovate electric motor and combustion engine technologies.
+      </p>
+      <div class="technical__circleCar">
+        <img class="technical__carImg" src="img/bmw-i8-tech.png" alt="bmw-i8-technical">
+        <div class="point">
+          <img src="img/plus2.svg" alt="more-info-car">
+          <p class="technical__pointData"><strong>Xenon headlights</strong></p>
+        </div>
+        <div class="point2">
+          <img src="img/plus2.svg" alt="more-info-car">
+          <p class="technical__pointData"><strong>Chrome materials</strong></p>
+        </div>
+      </div>
+      <div class="technical-infos">
+        <div class="tech__group">
+          <div class="tech__title">
+            4.4
+          </div>
+          <div class="tech__text">
+            Acceleration 0–100 km/h in s
+          </div>
+        </div>
+        <div class="tech__group">
+          <div class="tech__title">
+            2.1
+          </div>
+          <div class="tech__text">
+            Consumption combined in l/100 km
+          </div>
+        </div>
+        <div class="tech__group">
+          <div class="tech__title">
+            37
+          </div>
+          <div class="tech__text">
+            CO2 emissions ing/km
+          </div>
+        </div>
+        <div class="tech__group">
+          <div class="tech__title">
+            49
+          </div>
+          <div class="tech__text" id="technical-infos">
+            Electric range in km
+          </div>
+        </div>
+      </div>
+      <div class="technical__data__hidden">
+        <div class="technical__base">
+          <div class="technical__toggle__bis"><a data-scroll href="#technical"><img id="more-technical" src="img/plus.svg" alt="icon-see-more"></a></div>
+          <div class="element__wrap">
+            <h2>Consumption</h2>
+            <p class="element__text">CO2 emissions combined in g/km<strong>49.0</strong></p>
+            <p class="element__text">CO2 efficiency <strong>A+</strong></p>
+            <p class="element__text">Consumption combined in l/100 km <strong>2.1</strong></p>
+          </div>
+        </div>
+        <div class="technical__base">
+          <div class="element__wrap">
+            <h2>Weight of the car</h2>
+            <p class="element__text">Unladen weight in kg (DIN)** <strong>1,560</strong></p>
+            <p class="element__text">Max. permissible weight in kg <strong>1,870</strong></p>
+            <p class="element__text">Permitted load in kg <strong>385.0</strong></p>
+            <p class="element__text">Permitted axle load front/rear<strong>895/1,010</strong></p>
+          </div>
+        </div>
+        <div class="technical__base">
+          <div class="element__wrap">
+            <h2>Range and charge time</h2>
+            <p class="element__text">Unladen weight in kg (DIN)**<strong>37</strong></p>
+            <p class="element__text">Max. permissible weight in kg<strong>Up to 30</strong></p>
+            <p class="element__text">Permitted load in kg<strong>440</strong></p>
+            <p class="element__text">Growth capacity of lithium-ion <strong>7.1</strong></p>
+            <p class="element__text">Charging time of high-voltage battery in h at 3.7 kW/12 A (80 %) <strong>2.5</strong></p>
+            <p class="element__text">Charging time of high-voltage battery in h at 16 A (Wallbox) (80 %) <strong>2</strong></p>
+          </div>
+        </div>
+        <div class="technical__base">
+          <div class="element__wrap">
+            <h2>Performance of the car</h2>
+            <p class="element__text">Maximum speed on purely electric power in km/h<strong>120.0</strong></p>
+            <p class="element__text">Maximum speed in km/h <strong>250</strong></p>
+            <p class="element__text">Acceleration from 0–100 km/h in seconds <strong>4.4</strong></p>
+            <p class="element__text">Elasticity from 80–120 km/h in seconds <strong>3.4</strong></p>
+          </div>
+        </div>
+        <div class="technical__download">
+          <button>
+            <a href="img/Catalogue_BMW_i8.pdf" download>Download (PDF)</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Impulse -->
+    <section id="impulse">
+      <div class="impulse__intro">
+        <h2 class="impulse__introtitle">BMW i Pure Impulse Programme</h2>
+        <p>
+          The BMW i Pure Impulse Experience Programme opens up a world full of ideas and trends from the fields of travel, culture, gastronomy, design and much more. Like the BMW i8 itself, the programme represents a sustainable and luxury-orientated vision of
+          our life: the world of “Next Premium”.
+        </p>
+        <div class="impulse__more">
+          <p><img src="img/right-arrow.svg" alt="find-out-more"><a data-scroll href="#impulse">FIND OUT MORE</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section other series -->
+    <section id="BMWseries">
+      <h3 class="bmw__model">BMW 4 Series<br>Convertible</h3>
+      <div>
+        <ul id="slide-container">
+          <li class="l1"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
+          <li class="l2"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
+          <li class="l3"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
+          <li class="l4"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
+          <li class="l5"><img class="img__crosssel" src="img/bmw-car.png" alt="bmwcross-selling"></li>
+        </ul>
+        <div class="price__car">
+          <p class="starting__at">Starting at</p>
+          <p class="p__price">40,000€</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section find your car -->
+    <section id="findCar">
+      <div class="findCar__intro">
+        <h3 class="findCar__introtitle">EXPERIENCE</h3>
+        <p> Find your BMW I8</p>
+      </div>
+      <div class="technical__map" id="map"></div>
+    </section>
+
+    <!-- Section buy NOW -->
+    <section id="experience">
+      <span>Buy Now</span>
+    </section>
+
+    <!-- container--slider -->
   </div>
+  <!-- Container -->
+</div>
 
-  <script src="js/main.min.js"></script>
-  <script>
+<script src="js/main.min.js"></script>
+<script>
     var scroll = new SmoothScroll('.header a[href*="#"], .progressive__pic3 a[href*="#"], .impulse__more a[href*="#"], .technical__toggle__bis a[href*="#"], .technical__toggle a[href*="#"]');
-  </script>
-
+</script>
 
 </body>
 
