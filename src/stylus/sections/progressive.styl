@@ -94,13 +94,14 @@
         width 38rem
         font-size 3rem
     .progressive__texte
-      color $warm-grey
+      color $blue
       font-size $lfont
       font-weight 500
       padding 1.5rem 0rem
       background none
       border none
       cursor pointer
+      transition 0.3s ease all
       &:before
         margin-right 0.9375rem
         content ''
@@ -111,6 +112,8 @@
         background-repeat no-repeat
         background-size cover
         background-position center
+      &:hover
+        padding-left 10px
     :focus
       outline none
   .progressive__picture

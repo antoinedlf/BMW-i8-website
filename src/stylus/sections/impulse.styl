@@ -32,16 +32,27 @@
       width 50%
       font-size $lfont
   .impulse__more
-    padding 1rem 2rem
     color $blue
-    img
-      width 30px
-      transform translate(-30px,8px)
-    a
-      text-transform none
-      font-size 1rem
+    .progressive__texte
       color $blue
+      font-size $lfont
+      font-weight 500
+      padding 1.5rem 0rem
+      background none
+      border none
+      cursor pointer
       transition 0.3s ease all
+      &:before
+        margin-right 0.9375rem
+        content ''
+        background-image url(../img/arrow.png)
+        width 0.8125rem
+        height 0.8125rem
+        display inline-block
+        background-repeat no-repeat
+        background-size cover
+        background-position center
       &:hover
         padding-left 10px
-        color $white
+    :focus
+      outline none

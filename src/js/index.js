@@ -140,7 +140,7 @@ var locations = [
 ];
 var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
-    center: new google.maps.LatLng(48.869484, 2.301364),
+    center: new google.maps.LatLng(48.859312, 2.348424),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
     disableDefaultUI: true,
@@ -187,8 +187,6 @@ for (i = 0; i < locations.length; i++) {
     });
 
     markers.push(marker);
-
-    console.log(markers);
 
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
@@ -239,9 +237,6 @@ for (i = 0; i < locations.length; i++) {
     });
 
 }
-
-console.log(markers[0]);
-
 
 window.sr = ScrollReveal();
 sr.reveal('.progressive__content', { duration: 2000, origin: 'left', viewFactor: 0.1, reset: true, scale: 1 });
