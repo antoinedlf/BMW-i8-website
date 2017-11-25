@@ -17,9 +17,8 @@ html
 body
   width 100%
   height 100%
-  overflow-x hidden
   background-color $black
-  font-family $font, $opensans, sans-serif
+  font-family $font, sans-serif
   color $warm-grey
 ol, ul
   list-style none
@@ -30,15 +29,13 @@ h1
   margin 1em 0
   font-size 2rem
 h2
-  font-size 1.6rem
+  font-size 1.5rem
   color $grey
 
 
 /***** SLIDES *****/
 
 body
-  scroll-behavior smooth
-
   .container
 
     &--slider
@@ -53,11 +50,88 @@ body
         position relative
         width 100%
         height 100%
-        scroll-behavior smooth
 
-        span
-          position absolute
-          top 30%
-          left 15%
-          font-size 5vw
-          color $white
+/***** LOADER ****/
+
+#content-loader
+  width 100%
+  height 100%
+  position fixed
+  opacity 1
+  background $black
+  z-index 9999999999
+  transition all 0.6s ease-in-out
+  -moz-transition all 0.6s ease-in-out
+  -webkit-transition all 0.6s ease-in-out
+  top 0
+
+.wrapper
+  position absolute
+  z-index 10
+  width 200px
+  height 2px
+  left 0
+  right 0
+  bottom 0
+  top 0
+  margin auto
+
+
+.loader
+  height 100%
+  display flex
+  transform translateZ(0)
+
+  div
+    flex 1
+    -webkit-box-flex 1
+    background $blue
+    animation go .8s 10 infinite alternate ease
+    -webkit-animation go 0.8s infinite alternate ease
+    box-shadow 0 0 20px $blue
+
+  div:nth-child(1)
+    -webkit-animation-delay -0.72s
+    animation-delay -0.72s
+
+  div:nth-child(2)
+    -webkit-animation-delay: -0.64s
+    animation-delay: -0.64s
+
+  div:nth-child(3)
+    -webkit-animation-delay: -0.56s
+    animation-delay: -0.56s
+
+  div:nth-child(4)
+    -webkit-animation-delay: -0.48s
+    animation-delay: -0.48s
+
+  div:nth-child(5)
+    -webkit-animation-delay: -0.4s
+    animation-delay: -0.4s
+
+  div:nth-child(6)
+    -webkit-animation-delay: -0.32s
+    animation-delay: -0.32s
+
+  div:nth-child(7)
+    -webkit-animation-delay: -0.24s
+    animation-delay: -0.24s
+
+ div:nth-child(8)
+    -webkit-animation-delay: -0.16s
+    animation-delay: -0.16s
+
+ div:nth-child(9)
+    -webkit-animation-delay: -0.08s
+    animation-delay: -0.08s
+
+  div:nth-child(10)
+    -webkit-animation-delay: 0s
+    animation-delay: 0s
+
+@keyframes go
+  100%
+    background transparent
+    flex 10
+    box-shadow 0 0 0 transparent

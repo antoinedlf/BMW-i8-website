@@ -1,47 +1,161 @@
+/*** Youtube popup ****/
+
+  .lightbox
+      background-color rgba(0, 0, 0, 0.9)
+      overflow scroll
+      position fixed
+      z-index 1
+      bottom 0
+      right 0
+      left 0
+      top 0
+
+  .modal-overlay
+    position fixed;
+    z-index 99
+    visibility visible
+    opacity 1
+    -webkit-transition opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+    transition opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+
+  .modal-overlay.is-hidden
+    visibility hidden
+    opacity 0
+    opacity: 0;
+    -webkit-backface-visibility hidden
+    backface-visibility hidden
+
+  .lightbox-container
+      position relative
+      max-width 980px
+      margin 10% auto
+      display block
+      padding 0 3%
+      height auto
+      z-index 10
+      margin-top 8rem
+
+  .lightbox-content
+      box-shadow 0 1px 6px rgba(0, 0, 0, 0.7)
+
+  .lightbox-close
+      background transparent
+      position absolute
+      font-weight 300
+      font-size 2rem
+      display block
+      cursor pointer
+      border none
+      color $white
+      right 4%
+      top -3rem
+  .video-container
+      padding-bottom 55%
+      position relative
+      overflow hidden
+      height 0
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed
+      position absolute
+      height 100%
+      width 100%
+      left 0
+      top 0
+
+/*** Section progressive ****/
+
 #progressive
   background-image url(../img/bkg.png)
   background-repeat no-repeat
   background-size cover
   background-position center
-  h1
-    font-size 1.425rem
-    font-weight 500
-    text-align left
-    color $blue
-    padding-top 8.75rem
-    margin-left 2.375rem
-  h2
-    font-size 1.625rem
-    text-align left
-    font-weight 500
-    color $white
-    margin auto 2.375rem
-  p
-    font-size 1.025rem
-    font-weight 500
-    margin-left 2.375rem
-    margin-top 1.875rem
-    a
-      color $warm-grey
+  height 100vh
+  @media (min-width: 376px)
+    height auto
+  .progressive__content
+    margin-left 10%
+    @media (min-width: 1024px)
+      margin-left 10%
+    h1
+      font-size 1.425rem
+      font-weight 500
+      text-align left
+      color $blue
+      padding-top 5.75rem
+    h2
+      font-size 1.625rem
+      text-align left
+      font-weight 500
+      color $white
+      width 16rem
+      +medium()
+        width 38rem
+        font-size 3rem
+    .progressive__texte
+      color $blue
+      font-size $lfont
+      font-weight 500
+      padding 1.5rem 0rem
+      background none
+      border none
+      cursor pointer
+      transition 0.3s ease all
+      &:before
+        margin-right 0.9375rem
+        content ''
+        background-image url(../img/arrow.png)
+        width 0.8125rem
+        height 0.8125rem
+        display inline-block
+        background-repeat no-repeat
+        background-size cover
+        background-position center
+      &:hover
+        padding-left 10px
+    :focus
+      outline none
   .progressive__picture
-    // width 100%
-    // height 340px
-    // background-image url(../img/car.png)
-    // background-repeat no-repeat
-    // background-size cover
-    // background-position center
     width 100vw
-    height 215px
-    position relative
-    // display: flex;
-    // // justify-content: center;
-    // align-items: center;
+    height 13.4375rem
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .progressive__pic
       position absolute
       top 0
       max-width 100vw
+      pointer-events none
+      top 45%
+      @media (min-width: 460px)
+        top 25%
+      @media (min-width: 768px)
+        top 15%
+      @media (min-width: 1024px)
+        top 20%
+        max-width: 68vw;
     .progressive__pic2
       position absolute
-      top 45%
+      top 60%
+      pointer-events none
       max-width 41vw
       left 50%
+      @media (min-width: 460px)
+        top 50%
+      @media (min-width: 768px)
+        top 50%
+      @media (min-width: 1024px)
+        top 50%
+        max-width: 31vw;
+  .progressive__pic3
+    display block
+    padding-top 20%
+    text-align center
+    padding-bottom 2%
+    a
+      color $grey
+  @media (min-width: 1024px)
+    margin-top 1rem
+    p
+      font-size 1.125rem

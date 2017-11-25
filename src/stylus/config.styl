@@ -5,9 +5,28 @@ $blue = #1c69d4
 $white = #fefefe
 $technical = #eeeeee
 
-$font = 'ApercuPro'
-$opensans = 'Open Sans'
-$bold = 'Apercu Pro'
+$font = 'Apercu Pro'
+$semibold = '500'
+$bold = '700'
+$letter = 'Oswald'
+
+$sfont = 0.9rem
+$lfont = 1rem
+$ml = 10%
+
+$medium = 768px
+$large = 1024px
+$medlarge = 1366px
+
+medium()
+  @media (min-width: $medium)
+    {block}
+large()
+  @media (min-width: $large)
+    {block}
+medlarge()
+  @media (min-height: $medlarge)
+    {block}
 
 .surtitre
   font-size 1rem
@@ -17,7 +36,3 @@ $bold = 'Apercu Pro'
 .container
   padding 0rem
   height 100%
-
-$medium = 'screen and (min-width: 668px)'
-$large = 'screen and (min-width: 992px)'
-$xlarge = 'screen and (min-width: 1200px)'

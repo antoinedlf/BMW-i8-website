@@ -1,12 +1,12 @@
 const gulp         = require('gulp')
 const plumber      = require('gulp-plumber')
 const notify       = require('gulp-notify')
-const sourcemaps   = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
 const rename       = require('gulp-rename')
 const imagemin     = require('gulp-imagemin')
 const connect      = require('gulp-connect')
 const open         = require('gulp-open')
+const htmlmin      = require('gulp-htmlmin')
 const stylus       = require('gulp-stylus')
 const concat       = require('gulp-concat')
 const babel        = require('gulp-babel')
@@ -39,6 +39,7 @@ gulp.task('uri', () => {
 
 gulp.task('html', () =>
         gulp.src(config.src + 'index.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.dist))
         .pipe(connect.reload())
         .pipe(notify('HTML updated: <%= file.relative %>'))
@@ -69,10 +70,11 @@ gulp.task( 'css', function()
 
 // JS task
 gulp.task('js', () =>
-	gulp.src('src/js/*.js')
-		.pipe(babel())
-		.pipe(concat('main.min.js'))
-		.pipe(gulp.dest(config.dist + 'js'))
+ gulp.src('src/js/*.js')
+      .pipe(babel())
+      .pipe( plumber() )
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest(config.dist + 'js'))
 );
 
 gulp.task('watch', () => {

@@ -1,2 +1,58 @@
 #impulse
-  background $black
+  background-image url("../img/pureimpulse.jpg")
+  background-size cover
+  height 100%
+  display flex
+  align-items center
+  &:before
+    content ''
+    position absolute
+    width 100%
+    height 100%
+    background $black
+    opacity 0.8
+    z-index 1
+    top 0
+  +large()
+    height 75%
+  .impulse__intro
+    margin $ml
+    z-index 2
+  .impulse__introtitle
+    font-size 2rem
+    color $white
+    font-weight 300
+    margin 1em 0
+    +large()
+      font-size 2.5rem
+  p
+    line-height 1.5
+    font-size $sfont
+    +large()
+      width 50%
+      font-size $lfont
+  .impulse__more
+    color $blue
+    .progressive__texte
+      color $blue
+      font-size $lfont
+      font-weight 500
+      padding 1.5rem 0rem
+      background none
+      border none
+      cursor pointer
+      transition 0.3s ease all
+      &:before
+        margin-right 0.9375rem
+        content ''
+        background-image url(../img/arrow.png)
+        width 0.8125rem
+        height 0.8125rem
+        display inline-block
+        background-repeat no-repeat
+        background-size cover
+        background-position center
+      &:hover
+        padding-left 10px
+    :focus
+      outline none
