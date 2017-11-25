@@ -3,20 +3,24 @@ class Modal {
   constructor(overlay) {
     this.overlay = overlay;
     const closeButton = overlay.querySelector('.lightbox-close')
-    closeButton.addEventListener('click', this.close.bind(this)
+    closeButton.addEventListener('click',
+    this.close.bind(this)
   );
-    overlay.addEventListener('click', e => {
-      if (e.srcElement.id === this.overlay.id) {
-        this.close();
-      }
-    });
-  }
+}
   open() {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', true)
+    iframe.setAttribute('frameborder', 0)
+    iframe.setAttribute('width', 1200)
+    iframe.setAttribute('height', 675)
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/s6_6qzkDiJU?showinfo=0')
+    document.querySelector('.video-container').appendChild(iframe)
     this.overlay.classList.remove('is-hidden');
   }
 
   close() {
     this.overlay.classList.add('is-hidden');
+    document.body.querySelector('.video-container iframe').src='';
   }
 }
 

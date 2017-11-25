@@ -247,3 +247,4 @@ sr.reveal('.nav-sections', { duration: 2000, origin: 'right', viewFactor: 0.1, r
 sr.reveal('.technical__circleCar', { duration: 1000, origin: 'bottom', viewFactor: 0.1, reset: true, scale: 1 });
 sr.reveal('.technical-infos', { duration: 2000, origin: 'bottom', viewFactor: 0.1, reset: true, scale: 1 });
 sr.reveal('.impulse__intro', { duration: 2000, origin: 'left', viewFactor: 0.1, reset: true, scale: 1 });
+sr.reveal('.slider__tracker', { duration: 2000, origin: 'bottom', viewFactor: 0.1, reset: true, scale: 1 });
