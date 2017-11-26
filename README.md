@@ -2,6 +2,7 @@
 > Front-End Development project, BMW i8 website
 
 > One trimester school project
+Online version :point_right: [here](http://bmw.netlify.com/)
 
 [![NPM Version][npm-image]][npm-url]
 
