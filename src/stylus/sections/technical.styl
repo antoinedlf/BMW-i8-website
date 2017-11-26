@@ -19,12 +19,12 @@
     margin-top -1rem
     position absolute
     right 0
-    transform translate(-20px,-60px)
+    transform translate(-1.25rem,-3.75rem)
     cursor pointer
     outline none
   #more-technical
-    width 50px
-    @media (max-width: 600px)
+    width 3.125rem
+    @media (max-width: 37.5rem)
       #technical__intro
         color $warm-grey
         font-size $sfont
@@ -51,31 +51,31 @@
       content ''
       display inline-block
       position absolute
-      width 250px
+      width 15.625rem
       z-index -1
-      height 250px
+      height 15.625rem
       background #1c69d4
       border-radius 100%
       +medium()
-        width 600px
-        height 600px
+        width 37.5rem
+        height 37.5rem
       +large()
-        width 500px
-        height 500px
+        width 31.25rem
+        height 31.25rem
     .point
-      width 20px
-      height 20px
+      width 1.25rem
+      height 1.25rem
       position absolute
       display flex
-      transform translate(-50px, 40px)
+      transform translate(-3.125rem, 2.5rem)
       img
         width 100%
       +medium()
-        transform translate(-80px, 70px)
+        transform translate(-5rem, 4.375rem)
       +large()
-        width 30px
-        height 30px
-        transform translate(-90px, 50px)
+        width 1.875rem
+        height 1.875rem
+        transform translate(-5.625rem, 3.125rem)
       &:hover
         .technical__pointData
           opacity 1
@@ -86,38 +86,38 @@
           content ''
           background $blue
           position absolute
-          width 100px
-          height 2px
-          right -10px
-          top 50px
+          width 6.25rem
+          height 0.125rem
+          right -0.625rem
+          top 3.125rem
           transform rotate(120deg)
           +large()
-            right -45px
-            top 110px
-            width 250px
+            right -2.8125rem
+            top 10.625rem
+            width 15.625rem
         strong
           position absolute
-          left -50px
-          top 100px
+          left -3.125rem
+          top 6.25rem
           font-size 1rem
           color $blue
           +large()
-            left -120px
-            top 230px
+            left -11.25rem
+            top 21.875rem
     .point2
-      width 20px
-      height 20px
+      width 1.25rem
+      height 1.25rem
       position absolute
       display flex
-      transform translate(-120px, 0px)
+      transform translate(-11.25rem, 0rem)
       img
         width 100%
       +medium()
-        transform translate(-250px, 0px)
+        transform translate(-15.625rem, 0rem)
       +large()
-        width 30px
-        height 30px
-        transform translate(-300px, 0px)
+        width 1.875rem
+        height 1.875rem
+        transform translate(-18.75rem, 0rem)
       &:hover
         .technical__pointData
           opacity 1
@@ -128,19 +128,19 @@
           content ''
           background $blue
           position absolute
-          width 90px
-          height 2px
-          bottom 45px
+          width 90
+          height 0.125rem
+          bottom 2.8125rem
           right 0
           transform rotate(50deg)
         strong
           position absolute
           right 0
-          bottom 85px
+          bottom 5.3125rem
           font-size 1rem
           color $blue
   .technical-infos
-    padding 10px
+    padding 0.625rem
     display flex
     flex-wrap wrap
     overflow hidden
@@ -160,7 +160,7 @@
       font-weight 300
       font-size 2.5rem
       line-height 1.5
-      letter-spacing 9px
+      letter-spacing 0.5625rem
     .tech__text
       color $warm-grey
       display block
@@ -178,23 +178,23 @@
         position absolute
         right 0
         margin-top 1rem
-        transform translateX(-20px) rotate(45deg)
+        transform translateX(-1.25rem) rotate(45deg)
         cursor pointer
         outline none
       .element__wrap
         padding 3rem 3rem
-        margin-left 15px
-        margin-right 15px
-        border-bottom 1px solid $warm-grey
+        margin-left 0.9375rem
+        margin-right 0.9375rem
+        border-bottom 0.0625rem solid $warm-grey
         .element__text
           font-size 1rem
           color $warm-grey
           line-height 1.5
           text-align left
           strong
-            font-size 1rem
+            font-size $lfont
             color $blue
-            padding-left 15px
+            padding-left 0.9375rem
             +medium()
               padding-left 10%
             +large()
