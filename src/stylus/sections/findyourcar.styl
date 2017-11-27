@@ -4,6 +4,7 @@
     height auto
     background-image url("/img/find-your-car.jpg")
     background-size cover
+    background-position center
     display flex
     flex-wrap wrap
     align-items center
@@ -38,13 +39,18 @@
     .findCar__tab
       margin auto
       z-index 2
+      background-color $white
       .findCar__search
-        padding-left 1rem
-        width 20rem
+        width 19rem
         height 3.75rem
-        background-color $white
         color $black
         outline none
+        border none
+        background url("/img/search.png") no-repeat scroll 0.625rem 1.25rem
+        background-size 1rem
+        padding-left 2.125rem
+        &:active
+          border 1px solid $blue
         +large()
           width 25rem
   .technical__map
@@ -55,3 +61,4 @@
     height 43.75rem
     background gray
     border-top 0.3125rem solid $blue
+    border-bottom 0.3125rem solid $blue
