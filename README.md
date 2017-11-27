@@ -4,7 +4,7 @@
 > One trimester school project
 Online version :point_right: [here](http://bmw.netlify.com/)
 
-[![NPM Version][npm-image]][npm-url]
+[![npm](https://img.shields.io/npm/v/npm.svg)]()
 [![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)]()
 
 <a href="https://www.netlify.com">
@@ -12,7 +12,6 @@ Online version :point_right: [here](http://bmw.netlify.com/)
 </a>
 
 Product website of the BMW i8, new electric car by BMW.
-You can find an online version at <a href="https://bmw.netlify.com/">BMW.netlify.com</a>
 
 ![](header.png)
 
