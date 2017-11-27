@@ -5,10 +5,26 @@
 Online version :point_right: [here](http://bmw.netlify.com/)
 
 [![NPM Version][npm-image]][npm-url]
+[![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)]()
+
+<a href="https://www.netlify.com">
+  <img data-src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+</a>
 
 Product website of the BMW i8, new electric car by BMW.
+You can find an online version at <a href="https://bmw.netlify.com/">BMW.netlify.com</a>
 
 ![](header.png)
+
+## Prequisites
+- <a href="https://www.npmjs.com/get-npm">NPM</a>
+
+- <a href="https://nodejs.org/en/">Node</a>
+
+- Gulp 3.9.1
+```shell
+npm install --save gulp-install
+```
 
 ## Installation
 
@@ -20,6 +36,9 @@ cd hetic-p2020-13
 ```shell
 npm install
 ```
+
+## Building & Running
+
 * Run Gulp
 ```shell
 npm start
@@ -31,7 +50,7 @@ This web site was created to promote the new BMWi8.
 The idea was to create a website with the brand identity and respect the product identity.
 
 
-## Meta
+## Authors
 Project manager and developer: Robin Chateau
 [@robsiii](https://github.com/robsiii)
 
@@ -48,6 +67,16 @@ Lead designer : Adrien Laurent
 [@adrienlaurent](https://www.behance.net/adrienlaur1f2a)
 
 
+## Built with
+
+- NPM
+- Gulp
+- Stylus
+- Babel
+- Netlify
+- Smooth-scroll (Chris Ferdinand MIT License)
+- Google Maps API
+
 ## Contributing
 
 1. Fork it (<https://github.com/antoinedlf/hetic-p2020-13.git>)
@@ -55,11 +84,3 @@ Lead designer : Adrien Laurent
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
