@@ -8,9 +8,6 @@
 [![npm](https://img.shields.io/npm/v/npm.svg)]()
 [![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)]()
 
-<a href="https://www.netlify.com">
-  <img data-src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
-</a>
 
 Product website of the BMW i8, new electric car by BMW.
 
