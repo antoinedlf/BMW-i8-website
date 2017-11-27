@@ -1,12 +1,12 @@
-window.onload = () => {
+/**** LOADER ****/
+
+ window.addEventListener("load", function() {
     document.getElementById("content-loader").style.opacity = "0";
     document.getElementById("content-loader").style.zIndex = "0";
-}
+});
+
 
 /***** Menu items color *****/
-
-const menuactive       = document.querySelector(".header .active");
-const menuelements     = document.querySelector(".header").querySelectorAll("a");
 
 function activeClass(e) {
     document.querySelector(".header .main-nav ul li .active").classList.remove("active");
