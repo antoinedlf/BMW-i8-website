@@ -2,7 +2,8 @@
 > Front-End Development project, BMW i8 website
 
 > One trimester school project
-Online version :point_right: [here](http://bmw.netlify.com/)
+
+> Online version :point_right: [here](http://bmw.netlify.com/)
 
 [![npm](https://img.shields.io/npm/v/npm.svg)]()
 [![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)]()
