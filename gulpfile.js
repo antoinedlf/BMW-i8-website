@@ -43,14 +43,14 @@ gulp.task('html', () =>
         .pipe(gulp.dest(config.dist))
         .pipe(connect.reload())
         .pipe(notify('HTML updated: <%= file.relative %>'))
-);
+)
 
 gulp.task('images', () => {
     return gulp.src(config.src + 'img/*')
         .pipe(imagemin())
         .pipe(gulp.dest(config.dist + 'img'))
         .pipe(connect.reload())
-        .pipe(notify('Image minified: <%= file.relative %>'))
+    //  .pipe(notify('Image minified: <%= file.relative %>'))
 })
 
 gulp.task('fonts', () => {
@@ -64,18 +64,20 @@ gulp.task( 'css', function()
     gulp.src( './src/stylus/app.styl' )   // main.styl as input
         .pipe( plumber() )            // Gère les erreurs
         .pipe( stylus( { compress: true } ) ) // Convert to CSS
-        .pipe( gulp.dest(config.dist + 'css'));         // Put it in CSS folder
-} );
+        .pipe( gulp.dest(config.dist + 'css'))        // Put it in CSS folder
+        .pipe(notify('CSS updated: <%= file.relative %>'))
+} )
 
 
 // JS task
 gulp.task('js', () =>
  gulp.src('src/js/*.js')
-      .pipe(babel())
       .pipe( plumber() )
       .pipe(concat('main.min.js'))
+      .pipe(babel({presets: ['minify']}))
       .pipe(gulp.dest(config.dist + 'js'))
-);
+      .pipe(notify('JS updated: <%= file.relative %>'))
+)
 
 gulp.task('watch', () => {
     gulp.watch(config.src + 'img/*', ['images'])
