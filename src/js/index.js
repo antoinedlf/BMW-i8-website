@@ -1,8 +1,11 @@
+window.alert = () => {}
+alert = () => {}
+
 /**** LOADER ****/
 
  window.addEventListener("load", function() {
-    document.getElementById("content-loader").style.opacity = "0"
-    document.getElementById("content-loader").style.zIndex = "0"
+    document.getElementById("content__loader").style.opacity = "0"
+    document.getElementById("content__loader").style.zIndex = "0"
 })
 
 
@@ -150,7 +153,6 @@ var map = new google.maps.Map(document.getElementById('map'), {
     center: new google.maps.LatLng(48.859312, 2.348424),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
-    disableDefaultUI: true,
     styles: [{
         "featureType": "all",
         "elementType": "all",
