@@ -3,9 +3,13 @@ class Modal {
   constructor(overlay) {
     this.overlay = overlay;
     const closeButton = overlay.querySelector('.lightbox-close')
+    const openButton = document.querySelector('.progressive__texte')
     closeButton.addEventListener('click',
     this.close.bind(this)
-  );
+  )
+  openButton.addEventListener('click',
+    this.open.bind(this)
+  )
 }
   open() {
     const iframe = document.createElement('iframe')
@@ -24,5 +28,5 @@ class Modal {
   }
 }
 
+
 const modal = new Modal(document.querySelector('.modal-overlay'))
-window.openModal = modal.open.bind(modal)

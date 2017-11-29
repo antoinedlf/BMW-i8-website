@@ -7,27 +7,34 @@
 
 
 /***** Menu items color *****/
+const navEls = document.querySelectorAll('.header .main-nav ul li a')
 
-function activeClass(e) {
-    document.querySelector(".header .main-nav ul li .active").classList.remove("active")
-    e.classList.add('active')
-}
+navEls.forEach( (el) => {
+  el.addEventListener("click", (e) => {
+        document.querySelector(".header .main-nav ul li .active").classList.remove("active")
+        el.classList.add('active')
+    })
+})
 
 /***** Menu items mobile *****/
-function menudisplay(e) {
-    const header = document.querySelector(".header")
-    const links = document.querySelector(".header ul")
+const menuEls = document.querySelectorAll('.header .main-nav ul li a')
 
-    const burger = document.querySelector(".menu-toggle")
-    const mq = window.matchMedia("(max-width: 800px)")
+  menuEls.forEach( (el) => {
+    el.addEventListener("click", (e) => {
+      const header = document.querySelector(".header")
+      const links = document.querySelector(".header ul")
 
-    if (mq.matches) {
-        links.addEventListener("click", e => {
-            header.classList.add("none")
-            burger.checked = false
-        }, false)
-    }
-}
+      const burger = document.querySelector(".menu-toggle")
+      const mq = window.matchMedia("(max-width: 800px)")
+
+      if (mq.matches) {
+          links.addEventListener("click", e => {
+              header.classList.add("none")
+              burger.checked = false
+          }, false)
+      }
+  })
+})
 
 
 
