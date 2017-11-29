@@ -71,14 +71,16 @@
       left 0
       white-space nowrap
       display flex
-      -webkit-transition transform 0.5s ease
-      transition transform 0.5s ease
+      -webkit-transition transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1)
+      transition transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 
       +large()
         margin 4rem 0rem
       .slider__content
         min-width 100vw
         img
           max-width 100%
+          opacity 0.7
+          transition opacity 0.3s ease
           width 21.25rem
           height auto
           padding 2rem 4rem 0rem 4rem
@@ -86,6 +88,8 @@
             padding 4rem 1rem 0 1rem
           +medlarge()
             margin-top 0%
+        :hover
+          opacity 1
         .slider__price
           color $blue
           display flex

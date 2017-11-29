@@ -5,6 +5,8 @@
 
 > Online version :point_right: [here](http://bmw.netlify.com/)
 
+![Alt text](https://www.netlify.com/img/global/badges/netlify-color-bg.svg?raw=true "Netlify")
+
 [![npm](https://img.shields.io/npm/v/npm.svg)]()
 [![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)]()
 
@@ -38,7 +40,7 @@ npm install
 
 * Run Gulp
 ```shell
-npm start
+npm build
 ```
 
 ## Usage example
