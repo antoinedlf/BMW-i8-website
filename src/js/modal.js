@@ -17,7 +17,7 @@ class Modal {
     iframe.setAttribute('frameborder', 0)
     iframe.setAttribute('width', 1200)
     iframe.setAttribute('height', 675)
-    iframe.setAttribute('src', 'https://www.youtube.com/embed/s6_6qzkDiJU?autoplay=1&showinfo=0')
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/jtR7jYGiE_o?autoplay=1&showinfo=0')
     document.querySelector('.video-container').appendChild(iframe)
     this.overlay.classList.remove('is-hidden')
   }

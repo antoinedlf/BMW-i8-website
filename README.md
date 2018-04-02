@@ -3,7 +3,7 @@
 
 > One trimester school project
 
-> Online version :point_right: [here](http://bmw.netlify.com/)
+> Online version :point_right: [here](https://bmw.netlify.com/)
 
 ![Alt text](https://www.netlify.com/img/global/badges/netlify-color-bg.svg?raw=true "Netlify")
 
